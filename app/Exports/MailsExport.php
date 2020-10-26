@@ -5,8 +5,9 @@ namespace App\Exports;
 use App\Models\MailTable;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\Exportable;
+use Maatwebsite\Excel\Concerns\FromArray;
 
-class MailsExport implements FromCollection
+class MailsExport implements FromArray
 {
     /**
     * @return \Illuminate\Support\Collection
@@ -14,8 +15,21 @@ class MailsExport implements FromCollection
 
     use Exportable;
 
-    public function collection()
+    protected $data;
+
+    // public function collection()
+    // {
+    //     return MailTable::all();
+    // }
+
+    public function __construct(array $data)
     {
-        return MailTable::all();
+        $this->data = $data;
     }
+
+    public function array(): array
+    {
+        return $this->data;
+    }
+
 }

@@ -22,12 +22,11 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-
 Route::get('/verify/mail/{hash}', [MailController::class, 'confirmarMail']);
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     
-    /* Mail Table */
+    /* Dashboard */
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
@@ -35,9 +34,13 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     /* Mail Table */
     Route::get('/mail/mailtable', [TableMailController::class, 'index'])->name('mail.table');
 
-    Route::get('/mail/export', function(){
-        return Excel::download(new MailsExport, 'mails.xlsx');
-    })->name('mail.export');
+    Route::get('/mail/export/excel/{vardatos}', function(){
+        return Excel::download($vardatos, 'mails.xlsx');
+    })->name('mail.export.excel');
+
+    Route::get('/mail/export/csv', function(){
+        return Excel::download(new MailsExport, 'mails.csv');
+    })->name('mail.export.csv');
 
 });
 

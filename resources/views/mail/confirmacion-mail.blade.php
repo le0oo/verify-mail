@@ -19,7 +19,7 @@
     <body>
         @switch($verificado)
             @case('verificado')
-                <div class="bg-indigo-900 text-center py-4 lg:px-4">
+                <div class="bg-ligth-900 text-center py-4 lg:px-4">
                     <div class="p-2 bg-green-800 items-center text-green-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
                         <span class="flex rounded-full bg-green-500 uppercase px-2 py-1 text-xs font-bold mr-3">Estado</span>
                         <span class="font-semibold mr-2 text-left flex-auto">{{$mensaje}}</span>
@@ -28,7 +28,7 @@
                 </div>
                 @break
             @case('yaverificado')
-                <div class="bg-indigo-900 text-center py-4 lg:px-4">
+                <div class="bg-ligth-900 text-center py-4 lg:px-4">
                     <div class="p-2 bg-yellow-800 items-center text-yellow-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
                         <span class="flex rounded-full bg-yellow-500 uppercase px-2 py-1 text-xs font-bold mr-3">Estado</span>
                         <span class="font-semibold mr-2 text-left flex-auto">{{$mensaje}}</span>
@@ -37,7 +37,7 @@
                 </div>
                 @break
             @case('error')
-                <div class="bg-indigo-900 text-center py-4 lg:px-4">
+                <div class="bg-ligth-900 text-center py-4 lg:px-4">
                     <div class="p-2 bg-red-800 items-center text-red-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
                         <span class="flex rounded-full bg-red-500 uppercase px-2 py-1 text-xs font-bold mr-3">Estado</span>
                         <span class="font-semibold mr-2 text-left flex-auto">{{$mensaje}}</span>

@@ -15,23 +15,54 @@ class Table extends Component
     use WithPagination;
     public $verificado;
     public $emailsearch;
+    public $datasearch;
+    public $cissearch;
 
     public function render()
     {
-        return view('livewire.mail.table', [
-            'listmail' => MailTable::where('estado', $this->verificado)
+        $this->datasearch = MailTable::where('estado', $this->verificado)
                             ->where('mail', 'ILIKE', "%{$this->emailsearch}%")
-                            ->paginate(5)
-        ]);
+                            ->where('cis', 'LIKE', "{$this->cissearch}%")
+                            ->get();
+
+        if($this->verificado === null){
+            return view('livewire.mail.table', [
+                'listmail' => MailTable::where('mail', 'ILIKE', "%{$this->emailsearch}%")
+                                ->where('cis', 'LIKE', "{$this->cissearch}%")
+                                ->paginate(5)
+            ]);
+        }else{
+            return view('livewire.mail.table', [
+                'listmail' => MailTable::where('estado', $this->verificado)
+                                ->where('mail', 'ILIKE', "%{$this->emailsearch}%")
+                                ->where('cis', 'LIKE', "{$this->cissearch}%")
+                                ->paginate(5)
+            ]);
+        }
     }
+
+
     public function mount()
     {
         $this->verificado=null;
         $this->emailsearch='';
     }
 
-    public function export() 
+    public function limpiarfiltro(){
+        $this->verificado=null;
+        $this->emailsearch='';
+        $this->resetPage();
+    }
+
+    public function exportexcel() 
     {
-        return Excel::download(new MailsExport, 'mails.xlsx');
+        $export = new MailsExport([$this->datasearch]);
+        return Excel::download($export, 'mails.xlsx');
+    }
+    
+    public function exportcsv() 
+    {
+        $export = new MailsExport([$this->datasearch]);
+        return Excel::download($export, 'mails.csv');
     }
 }
