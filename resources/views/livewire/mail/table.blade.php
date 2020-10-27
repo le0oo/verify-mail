@@ -20,8 +20,14 @@
                         <label class="mr-3" for="email">CIS</label>
                         <input class="form-input rounded-md shadow-sm mt-1" wire:model="cissearch" type="text">
                     </div>
+                    <div>
+                        <button wire:click.prevent="limpiarfiltro()" type="button"
+                        class="inline-flex justify-center rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                            Limpiar Filtro
+                        </button>
+                    </div>
                 </div>
-                <div class="bg-white px-4 py-3  flex items-center justify-around border-t border-gray-200 sm:px-6">
+                {{-- <div class="bg-white px-4 py-3  flex items-center justify-around border-t border-gray-200 sm:px-6">
                     <div>
                         <label class="mr-5" for="export">Fecha de verificacion</label>
                         <label class="mr-2" for="export">Desde:</label>
@@ -33,7 +39,7 @@
                     class="inline-flex justify-center rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">
                         Limpiar Filtro
                     </button>
-                </div>
+                </div> --}}
 
                 <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                     <table class="min-w-full divide-y divide-gray-200">
@@ -64,13 +70,7 @@
                                 <div class="text-sm leading-5 text-gray-900">{{$index->cis}}</div>
                             </td>
                             <td class="px-6 py-4 whitespace-no-wrap">
-                                <div class="flex items-center">
-                                    <div class="ml-4">
-                                        <div class="text-sm leading-5 font-medium text-gray-900">
-                                        {{$index->mail}}
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="text-sm leading-5 text-gray-900">{{$index->mail}}</div>
                             </td>
                             <td class="px-6 py-4 whitespace-no-wrap">
                                 <div class="text-sm leading-5 text-gray-900">{{$index->hash}}</div>
@@ -104,11 +104,11 @@
                     </div>
                     <div class="bg-white px-4 py-3 border-t border-gray-200 sm:px-6">
                         <label for="export">Exportar</label>
-                        <button wire:click.prevent="exportexcel()" type="button"
+                        <button wire:click.prevent="export('excel')" type="button"
                         class="inline-flex justify-center rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">
                             Excel
                         </button>
-                        <button wire:click.prevent="exportcsv()" type="button"
+                        <button wire:click.prevent="export('csv')" type="button"
                         class="inline-flex justify-center rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">
                             CSV
                         </button>
@@ -117,5 +117,4 @@
             </div>
         </div>
     </div>
-
 </div>

@@ -5,13 +5,13 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                    <a href="{{ route('inicio') }}">
+                        <x-application-mark class="block h-9 w-auto" />
                     </a>
                 </div>
                 <!-- Navigation Links -->
                 @php($navLinks = [
-                    ['href' => '/dashboard', 'name' => 'dashboard', 'text' => 'Dashboard'],
+                    ['href' => '/inicio', 'name' => 'inicio', 'text' => 'Inicio'],
                     ['href' => '/mail/mailtable', 'name' => 'mail.table', 'text' => 'Mail'],
                 ])
                 

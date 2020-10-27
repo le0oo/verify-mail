@@ -31,6 +31,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
         return view('dashboard');
     })->name('dashboard');
     
+    /* Inicio */
+    Route::get('/inicio', function () {
+        return view('inicio');
+    })->name('inicio');
+
     /* Mail Table */
     Route::get('/mail/mailtable', [TableMailController::class, 'index'])->name('mail.table');
 
