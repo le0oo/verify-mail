@@ -11,7 +11,7 @@
                 </div>
                 <!-- Navigation Links -->
                 @php($navLinks = [
-                    ['href' => '/dashboard', 'name' => 'dashboard', 'text' => 'Dashboard'],
+                    ['href' => '/inicio', 'name' => 'inicio', 'text' => 'Inicio'],
                     ['href' => '/mail/mailtable', 'name' => 'mail.table', 'text' => 'Mail'],
                 ])
                 

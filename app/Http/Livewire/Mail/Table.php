@@ -20,20 +20,23 @@ class Table extends Component
 
     public function render()
     {
-        $this->datasearch = MailTable::where('estado', $this->verificado)
-                            ->where('mail', 'ILIKE', "%{$this->emailsearch}%")
-                            ->where('cis', 'LIKE', "{$this->cissearch}%")
-                            ->get();
 
         if($this->verificado === null){
+
+
+            
             return view('livewire.mail.table', [
-                'listmail' => MailTable::where('mail', 'ILIKE', "%{$this->emailsearch}%")
+                'listmail' => MailTable::select('id','cis','mail','hash','estado','updated_at')
+                                ->where('mail', 'ILIKE', "%{$this->emailsearch}%")
                                 ->where('cis', 'LIKE', "{$this->cissearch}%")
                                 ->paginate(5)
             ]);
         }else{
+
+
             return view('livewire.mail.table', [
-                'listmail' => MailTable::where('estado', $this->verificado)
+                'listmail' => MailTable::select('id','cis','mail','hash','estado','updated_at')
+                                ->where('estado', $this->verificado)
                                 ->where('mail', 'ILIKE', "%{$this->emailsearch}%")
                                 ->where('cis', 'LIKE', "{$this->cissearch}%")
                                 ->paginate(5)
@@ -44,25 +47,59 @@ class Table extends Component
 
     public function mount()
     {
-        $this->verificado=null;
-        $this->emailsearch='';
+        $this->limpiarfiltro();
     }
 
     public function limpiarfiltro(){
         $this->verificado=null;
         $this->emailsearch='';
+        $this->cissearch='';
         $this->resetPage();
     }
 
-    public function exportexcel() 
+    public function export($select) 
     {
-        $export = new MailsExport([$this->datasearch]);
-        return Excel::download($export, 'mails.xlsx');
-    }
+        switch($select){
+            case "excel":
+                if($this->verificado === null)
+                    {
+                        $export = new MailsExport([MailTable::select('id','cis','mail','hash','estado','updated_at')
+                                                ->where('mail', 'ILIKE', "%{$this->emailsearch}%")
+                                                ->where('cis', 'LIKE', "{$this->cissearch}%")
+                                                ->get()]);
+                    }
+                else
+                    {
+                        $export = new MailsExport([MailTable::select('id','cis','mail','hash','estado','updated_at')
+                                                ->where('estado', $this->verificado)
+                                                ->where('mail', 'ILIKE', "%{$this->emailsearch}%")
+                                                ->where('cis', 'LIKE', "{$this->cissearch}%")
+                                                ->get()]);
+
+                    }
+
+                return Excel::download($export, 'mails.xlsx');
+                break;
+            case "csv":
+                if($this->verificado === null)
+                {
+                    $export = new MailsExport([MailTable::select('id','cis','mail','hash','estado','updated_at')
+                                            ->where('mail', 'ILIKE', "%{$this->emailsearch}%")
+                                            ->where('cis', 'LIKE', "{$this->cissearch}%")
+                                            ->get()]);
+                }
+                else
+                {
+                    $export = new MailsExport([MailTable::select('id','cis','mail','hash','estado','updated_at')
+                                            ->where('estado', $this->verificado)
+                                            ->where('mail', 'ILIKE', "%{$this->emailsearch}%")
+                                            ->where('cis', 'LIKE', "{$this->cissearch}%")
+                                            ->get()]);
     
-    public function exportcsv() 
-    {
-        $export = new MailsExport([$this->datasearch]);
-        return Excel::download($export, 'mails.csv');
+                }
+                return Excel::download($export, 'mails.csv');
+                break;
+        }
+
     }
 }
