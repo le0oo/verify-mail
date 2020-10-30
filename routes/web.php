@@ -24,6 +24,10 @@ Route::get('/', function () {
 
 Route::get('/verify/mail/{hash}', [MailController::class, 'confirmarMail']);
 
+Route::get('/verify/mailconfirmation', function(){
+    return view('mail.confirmacion-mail2');
+});
+
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     
     /* Dashboard */

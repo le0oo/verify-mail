@@ -17,34 +17,47 @@
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.js" defer></script>
     </head>
     <body>
-        @switch($verificado)
-            @case('verificado')
-                <div class="bg-ligth-900 text-center py-4 lg:px-4">
-                    <div class="p-2 bg-green-800 items-center text-green-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
-                        <span class="flex rounded-full bg-green-500 uppercase px-2 py-1 text-xs font-bold mr-3">Estado</span>
-                        <span class="font-semibold mr-2 text-left flex-auto">{{$mensaje}}</span>
-                        <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
-                    </div>
-                </div>
-                @break
-            @case('yaverificado')
-                <div class="bg-ligth-900 text-center py-4 lg:px-4">
-                    <div class="p-2 bg-yellow-800 items-center text-yellow-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
-                        <span class="flex rounded-full bg-yellow-500 uppercase px-2 py-1 text-xs font-bold mr-3">Estado</span>
-                        <span class="font-semibold mr-2 text-left flex-auto">{{$mensaje}}</span>
-                        <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
-                    </div>
-                </div>
-                @break
-            @case('error')
-                <div class="bg-ligth-900 text-center py-4 lg:px-4">
-                    <div class="p-2 bg-red-800 items-center text-red-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
-                        <span class="flex rounded-full bg-red-500 uppercase px-2 py-1 text-xs font-bold mr-3">Estado</span>
-                        <span class="font-semibold mr-2 text-left flex-auto">{{$mensaje}}</span>
-                        <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
-                    </div>
-                </div>
-                @break
-        @endswitch          
-    </body>
+
+        <div class="max-w-6xl mx-auto">
+          <div class="flex items-center justify-center min-h-screen">
+              <div class="max-w-sm w-full sm:w-1/2 lg:w-1/3 py-6 px-3">
+                  <div class="bg-white shadow-xl rounded-lg overflow-hidden">
+                      <div class="bg-cover bg-center h-56 p-4" style="background-image: url(/img/grupojunin.jpg)">
+                      </div>
+                      <div class="p-4">
+                        @switch($verificado)
+                          @case('verificado')
+                            <p class="uppercase tracking-wide text-sm font-bold text-gray-700">Su MAIL:</p>
+                            <p class="text-3xl text-gray-900">{{$namemail}}</p>
+                            <div class="items-center text-center mb-2 mt-2">
+                                  <span class="rounded-full bg-green-500 uppercase px-2 py-1 text-xs font-bold">Se a verificado</span>
+                            </div>
+                            @break
+                          @case('yaverificado')
+                            <p class="uppercase tracking-wide text-sm font-bold text-gray-700">Su MAIL:</p>
+                            <p class="text-3xl text-gray-900">{{$namemail}}</p>
+                            <div class="items-center text-center mb-2 mt-2">
+                                  <span class="rounded-full bg-yellow-500 uppercase px-2 py-1 text-xs font-bold">Ya se a verificado</span>
+                            </div>
+                            @break
+                          @case('error')
+                            <div class="items-center text-center mb-2 mt-2">
+                                  <span class="rounded-full bg-red-500 uppercase px-2 py-1 text-xs font-bold">Error de verificacion</span>
+                            </div>
+                            @break
+                        @endswitch
+                      </div>
+                      <div class="flex items-center justify-center p-4 border-t border-gray-300 text-gray-700">
+                          <div class="flex items-center">
+                              <span class="text-blue-900 font-bold">
+                                <a href="www.grupojunin.com.ar">www.grupojunin.com.ar</a>
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </body>
 </html>
+  

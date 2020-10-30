@@ -10,19 +10,24 @@ class MailController extends Controller
 
     public function confirmarMail($hash){
         $mail = MailTable::where('hash', $hash)->first();
-
+        $namemail = '';
         if($mail ==! null){
             if($mail->estado == false){
+                $namemail = $mail->mail;
                 $mail->estado = true;
                 $mail->update();
                 return view('mail.confirmacion-mail', [
                         'mensaje' => 'Mail Verificado', 
-                        'verificado' => 'verificado'
+                        'verificado' => 'verificado',
+                        'namemail' => $namemail
                     ]);
             }else{
+                $namemail = $mail->mail;
                 return view('mail.confirmacion-mail', [
                     'mensaje'=>'Su Mail ya a sido Verificado', 
-                    'verificado'=>'yaverificado']);
+                    'verificado'=>'yaverificado',
+                    'namemail' => $namemail
+                    ]);
             }
         }else{
             return view('mail.confirmacion-mail', [
