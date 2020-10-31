@@ -28,6 +28,12 @@ Route::get('/verify/mailconfirmation', function(){
     return view('mail.confirmacion-mail2');
 });
 
+
+Route::get('/verify/registermail', function(){
+    return view('mail.register-mail');
+});
+
+
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     
     /* Dashboard */
