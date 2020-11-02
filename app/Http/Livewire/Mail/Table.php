@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Mail;
 use App\Models\MailTable;
+use App\Models\CisTable;
 use Livewire\WithPagination;
 
 use App\Exports\MailsExport;
@@ -21,25 +22,29 @@ class Table extends Component
     public function render()
     {
 
+        // dd(MailTable::select('id','mail','hash','estado','updated_at')
+        //                         ->where('mail', 'ILIKE', "%{$this->emailsearch}%")
+        //                         // ->where('cis', 'LIKE', "{$this->cissearch}%")
+        //                         ->get());
+
         if($this->verificado === null){
 
-
-            
             return view('livewire.mail.table', [
-                'listmail' => MailTable::select('id','cis','mail','hash','estado','updated_at')
+                'listmail' => MailTable::select('id','mail','cis','hash','estado','updated_at')
                                 ->where('mail', 'ILIKE', "%{$this->emailsearch}%")
                                 ->where('cis', 'LIKE', "{$this->cissearch}%")
-                                ->paginate(5)
+                                ->paginate(5),
+                'listcis'   => CisTable::all()
             ]);
         }else{
-
 
             return view('livewire.mail.table', [
                 'listmail' => MailTable::select('id','cis','mail','hash','estado','updated_at')
                                 ->where('estado', $this->verificado)
                                 ->where('mail', 'ILIKE', "%{$this->emailsearch}%")
                                 ->where('cis', 'LIKE', "{$this->cissearch}%")
-                                ->paginate(5)
+                                ->paginate(5),
+                                'listcis'   => CisTable::all()
             ]);
         }
     }

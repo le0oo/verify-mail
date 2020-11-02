@@ -24,14 +24,16 @@ Route::get('/', function () {
 
 Route::get('/verify/mail/{hash}', [MailController::class, 'confirmarMail']);
 
+Route::get('/verify/verifymail/{code}', [Mail\Regmail::class, 'verify_mail']);
+
 Route::get('/verify/mailconfirmation', function(){
     return view('mail.confirmacion-mail2');
 });
 
-
 Route::get('/verify/registermail', function(){
     return view('mail.register-mail');
 });
+
 
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){

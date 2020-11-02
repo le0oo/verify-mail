@@ -46,10 +46,10 @@
                     <thead>
                         <tr>
                             <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                CIS
+                                Mail
                             </th>
                             <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                Mail
+                                CIS
                             </th>
                             <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                                 Hash
@@ -67,10 +67,12 @@
                     @foreach($listmail as $index)
                         <tr>
                             <td class="px-6 py-4 whitespace-no-wrap">
-                                <div class="text-sm leading-5 text-gray-900">{{$index->cis}}</div>
+                                <div class="text-sm leading-5 text-gray-900">{{$index->mail}}</div>
                             </td>
                             <td class="px-6 py-4 whitespace-no-wrap">
-                                <div class="text-sm leading-5 text-gray-900">{{$index->mail}}</div>
+                                <div class="text-sm leading-5 text-gray-900">
+                                    {{$index->cis}}
+                                </div>
                             </td>
                             <td class="px-6 py-4 whitespace-no-wrap">
                                 <div class="text-sm leading-5 text-gray-900">{{$index->hash}}</div>

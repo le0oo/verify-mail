@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\MailTable;
+use App\Models\VerifyMail;
 
 class MailController extends Controller
 {
 
-    public function confirmarMail($hash){
+    public function confirmarMail($hash)
+    {
         $mail = MailTable::where('hash', $hash)->first();
         $namemail = '';
         if($mail ==! null){
@@ -36,4 +38,5 @@ class MailController extends Controller
         }
 
     }
+
 }

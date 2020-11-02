@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMailTablesTable extends Migration
+class CreateCisTablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateMailTablesTable extends Migration
      */
     public function up()
     {
-        Schema::create('mail_tables', function (Blueprint $table) {
+        Schema::create('cis_tables', function (Blueprint $table) {
             $table->id();
             $table->string('cis');
-            $table->string('mail');
-            $table->string('hash');
-            $table->boolean('estado');
+            $table->string('descrip');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateMailTablesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mail_tables');
+        Schema::dropIfExists('cis_tables');
     }
 }
