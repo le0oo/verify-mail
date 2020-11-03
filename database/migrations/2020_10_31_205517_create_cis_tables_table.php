@@ -16,7 +16,7 @@ class CreateCisTablesTable extends Migration
         Schema::create('cis_tables', function (Blueprint $table) {
             $table->id();
             $table->string('cis');
-            $table->string('descrip');
+            $table->string('descrip')->nullable();
             $table->timestamps();
         });
     }

@@ -101,9 +101,11 @@
                         <!-- More rows... -->
                     </tbody>
                     </table>
-                    <div class="bg-white px-4 py-3 border-t border-gray-200 sm:px-6">
-                        {{ $listmail->links() }}
-                    </div>
+                    @if($listmail->count() > 4)
+                        <div class="bg-white px-4 py-3 border-t border-gray-200 sm:px-6">
+                            {{ $listmail->links() }}
+                        </div>
+                    @endif
                     <div class="bg-white px-4 py-3 border-t border-gray-200 sm:px-6">
                         <label for="export">Exportar</label>
                         <button wire:click.prevent="export('excel')" type="button"

@@ -6,7 +6,6 @@ use App\Exports\MailsExport;
 use App\Http\Controllers\TableMailController;
 use App\Http\Livewire\Mail;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,23 +17,21 @@ use App\Http\Livewire\Mail;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function (){
+
+});
+
+Route::get('/app/verifica', function () {
     return view('auth.login');
 });
 
 Route::get('/verify/mail/{hash}', [MailController::class, 'confirmarMail']);
 
-Route::get('/verify/verifymail/{code}', [Mail\Regmail::class, 'verify_mail']);
-
-Route::get('/verify/mailconfirmation', function(){
-    return view('mail.confirmacion-mail2');
-});
+Route::get('/verify/verifymail/{hash}', [MailController::class, 'confirmarFormRegMail']);
 
 Route::get('/verify/registermail', function(){
     return view('mail.register-mail');
 });
-
-
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     
@@ -51,13 +48,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     /* Mail Table */
     Route::get('/mail/mailtable', [TableMailController::class, 'index'])->name('mail.table');
 
-    Route::get('/mail/export/excel/{vardatos}', function(){
-        return Excel::download($vardatos, 'mails.xlsx');
-    })->name('mail.export.excel');
+    // Route::get('/mail/export/excel/{vardatos}', function(){
+    //     return Excel::download($vardatos, 'mails.xlsx');
+    // })->name('mail.export.excel');
 
-    Route::get('/mail/export/csv', function(){
-        return Excel::download(new MailsExport, 'mails.csv');
-    })->name('mail.export.csv');
+    // Route::get('/mail/export/csv', function(){
+    //     return Excel::download(new MailsExport, 'mails.csv');
+    // })->name('mail.export.csv');
 
 });
-
