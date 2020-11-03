@@ -17,7 +17,6 @@
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.js" defer></script>
     </head>
     <body>
-
         <div class="max-w-6xl mx-auto">
           <div class="flex items-center justify-center min-h-screen">
               <div class="max-w-sm w-full sm:w-1/2 lg:w-1/3 py-6 px-3">
@@ -25,31 +24,13 @@
                       <div class="bg-cover bg-center h-56 p-4" style="background-image: url(/img/grupojunin.jpg)">
                       </div>
                       <div class="p-4">
-                        @switch($verificado)
-                          @case('verificado')
-                            <p class="uppercase tracking-wide text-sm font-bold text-gray-700">Su MAIL:</p>
-                            <p class="text-3xl text-gray-900">{{$namemail}}</p>
-                            @if($cis)
-                              <p class="uppercase tracking-wide text-sm font-bold text-gray-700">Su CIS:</p>
-                              <p class="text-3xl text-gray-900">{{$cis}}</p>
-                            @endif
+                            <p class="uppercase tracking-wide text-sm font-bold text-gray-700">Acceda al siguiente link</p>
+                            <p class="text-3xl text-gray-900">{{$mail}}</p>
+                            <p class="text-3xl text-gray-900">{{$cis}}</p>
                             <div class="items-center text-center mb-2 mt-2">
-                                  <span class="rounded-full bg-green-500 uppercase px-2 py-1 text-xs font-bold">Se a verificado</span>
+                            <a href="{{url('/verify/verifymail/'. $verify_code)}}" 
+                                    class="rounded-full bg-green-500 uppercase px-2 py-1 text-xs font-bold">Verificar</span>
                             </div>
-                            @break
-                          @case('yaverificado')
-                            <p class="uppercase tracking-wide text-sm font-bold text-gray-700">Su MAIL:</p>
-                            <p class="text-3xl text-gray-900">{{$namemail}}</p>
-                            <div class="items-center text-center mb-2 mt-2">
-                                  <span class="rounded-full bg-yellow-500 uppercase px-2 py-1 text-xs font-bold">Ya se a verificado</span>
-                            </div>
-                            @break
-                          @case('error')
-                            <div class="items-center text-center mb-2 mt-2">
-                                  <span class="rounded-full bg-red-500 uppercase px-2 py-1 text-xs font-bold">Error de verificacion</span>
-                            </div>
-                            @break
-                        @endswitch
                       </div>
                       <div class="flex items-center justify-center p-4 border-t border-gray-300 text-gray-700">
                           <div class="flex items-center">
@@ -64,4 +45,3 @@
       </div>
   </body>
 </html>
-  

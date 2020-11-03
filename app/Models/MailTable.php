@@ -9,5 +9,5 @@ class MailTable extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['mail', 'estado'];
+    protected $fillable = ['mail','cis','hash','estado'];
 }
