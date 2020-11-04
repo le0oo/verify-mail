@@ -27,8 +27,16 @@ class Table extends Component
         //                         // ->where('cis', 'LIKE', "{$this->cissearch}%")
         //                         ->get());
 
-        if($this->verificado === null){
+        if($this->verificado === null && $this->cissearch === ''){
 
+            return view('livewire.mail.table', [
+                'listmail' => MailTable::select('id','mail','cis','hash','estado','updated_at')
+                                ->where('mail', 'LIKE', "%{$this->emailsearch}%")
+                                ->paginate(5),
+                'listcis'   => CisTable::all()
+            ]);
+        }elseif($this->verificado === null && $this->cissearch ==! null)
+        {
             return view('livewire.mail.table', [
                 'listmail' => MailTable::select('id','mail','cis','hash','estado','updated_at')
                                 ->where('mail', 'LIKE', "%{$this->emailsearch}%")
@@ -36,7 +44,9 @@ class Table extends Component
                                 ->paginate(5),
                 'listcis'   => CisTable::all()
             ]);
-        }else{
+
+        }else        
+        {
             return view('livewire.mail.table', [
                 'listmail' => MailTable::select('id','cis','mail','hash','estado','updated_at')
                                 ->where('estado', $this->verificado)
@@ -47,7 +57,6 @@ class Table extends Component
             ]);
         }
     }
-
 
     public function mount()
     {

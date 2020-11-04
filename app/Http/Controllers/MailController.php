@@ -91,6 +91,41 @@ class MailController extends Controller
         }
     }
 
+    public function confirmarMailsincis($hash)
+    {
+        $mail = MailTable::where('hash', $hash)->first();
+        $namemail = '';
+
+        if($mail->estado == false)
+        {
+            $namemail = $mail->mail;
+            $mail->estado = true;
+            $mail->update();
+
+            return view('mail.confirmacion-mail', [
+                    'mensaje' => 'Mail Verificado', 
+                    'verificado' => 'verificado',
+                    'namemail' => $namemail
+                ]);
+
+        }elseif($mail->estado == true)
+        {
+            $namemail = $mail->mail;
+            return view('mail.confirmacion-mail', [
+                'mensaje'=>'Su Mail ya a sido Verificado', 
+                'verificado'=>'yaverificado',
+                'namemail' => $namemail
+                ]);
+        
+        }else
+        {
+            return view('mail.confirmacion-mail', [
+                'mensaje'=>'Error de verificacion', 
+                'verificado'=>'error']);
+        }
+
+    }
+
     public function registerMail($user,$pass,$cis,$varmail,$hash){
     
         $arrCis = (json_decode($cis,TRUE));
@@ -104,6 +139,21 @@ class MailController extends Controller
                     'hash' => $hash,
                 ]);
             }
+        }
+
+    }
+
+    public function registerMailsincis($user,$pass,$varmail,$hash){
+
+        if ($user === "sysadmin" && $pass ==="SaleVale"){
+
+            dd($varmail,$hash);
+
+            $mailtable = MailTable::create([
+                'mail' => $varmail,
+                'hash' => $hash,
+            ]);
+
         }
 
     }

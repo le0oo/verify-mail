@@ -25,11 +25,16 @@ Route::get('/app/verifica', function () {
     return view('auth.login');
 });
 
-Route::get('/verify/mail/{hash}', [MailController::class, 'confirmarMail']);
+Route::get('/verify/mailmorecis/{hash}', [MailController::class, 'confirmarMail']);
 
-Route::get('/verify/mailsys/{user}/{pass}/{cis}/{varmail}/{hash}', [MailController::class, 'registerMail']);
+Route::get('/verify/mail/{hash}', [MailController::class, 'confirmarMailsincis']);
 
 Route::get('/verify/verifymail/{hash}', [MailController::class, 'confirmarFormRegMail']);
+
+Route::get('/verify/mailsys/morecis/{user}/{pass}/{cis}/{varmail}/{hash}', [MailController::class, 'registerMail']);
+
+Route::get('/verify/mailsys/{user}/{pass}/{varmail}/{hash}', [MailController::class, 'registerMailsincis']);
+
 
 Route::get('/verify/registermail', function(){
     return view('mail.register-mail');
