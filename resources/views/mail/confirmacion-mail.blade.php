@@ -30,8 +30,10 @@
                             <p class="uppercase tracking-wide text-sm font-bold text-gray-700">Su MAIL:</p>
                             <p class="text-3xl text-gray-900">{{$namemail}}</p>
                             @if($cis)
+                              @foreach($cis as $indice)
                               <p class="uppercase tracking-wide text-sm font-bold text-gray-700">Su CIS:</p>
-                              <p class="text-3xl text-gray-900">{{$cis}}</p>
+                              <p class="text-3xl text-gray-900">{{$indice->cistables->cis}}</p>
+                              @endforeach
                             @endif
                             <div class="items-center text-center mb-2 mt-2">
                                   <span class="rounded-full bg-green-500 uppercase px-2 py-1 text-xs font-bold">Se a verificado</span>

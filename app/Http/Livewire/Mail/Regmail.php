@@ -36,15 +36,17 @@ class Regmail extends Component
             'mail' => $data['mail'],
             'verify_code' => $data['verify_code'],
         ]);
-
-        $cistable = CisTable::create([
-            'cis' => $data['cis']
-        ]);
-
-        $cismail = CisMail::create([
-            'id_verify_mail_fk'=>$verifymail->id,
-            'id_cis_table_fk'=>$cistable->id
-        ]);
+        
+        foreach($data['cis'] as $key => $value)
+        {
+            $cistable = CisTable::create([
+                'cis' => $value
+            ]);
+            $cismail = CisMail::create([
+                'id_verify_mail_fk'=>$verifymail->id,
+                'id_cis_table_fk'=>$cistable->id
+            ]);
+        }
 
         // Se envia mail para confirmar el mail
 
@@ -52,9 +54,13 @@ class Regmail extends Component
         {
             $message->to($data['mail'], "Grupo Servicios Junin") -> subject('Verificacion de Factura Digital');
         });
+        
 
         $this->mail = '';
-        $this->cis = '';
+        $this->cis[1] = '';
+        $this->cis[2] = '';
+
+        session()->flash('message', 'Verificar Mail en correo electronico...');
 
         // return $mail;
 

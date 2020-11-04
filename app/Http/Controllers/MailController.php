@@ -50,19 +50,20 @@ class MailController extends Controller
             $mailverify->confirmed = true;
             $mailverify->save();
 
-            $cismail = CisMail::where('id_cis_table_fk', $mailverify->id)->first();
+            $cismail = CisMail::where('id_verify_mail_fk', $mailverify->id)->get();
 
-            $mailtable = MailTable::create([
-                'cis' => $cismail->cistables->cis,
-                'mail' => $mailverify->mail,
-                'hash' => $mailverify->verify_code,
-                'estado' => true,
-            ]);
-
+            foreach ($cismail as $indice){
+                $mailtable = MailTable::create([
+                    'cis' => $indice->cistables->cis,
+                    'mail' => $mailverify->mail,
+                    'hash' => $mailverify->verify_code,
+                    'estado' => true,
+                ]);
+            }
             return view('mail.confirmacion-mail', [
                 'mensaje' => 'Mail Verificado', 
                 'verificado' => 'verificado',
-                'cis' => $cismail->cistables->cis,
+                'cis' => $cismail,
                 'namemail' => $mailverify->mail
             ]);
 

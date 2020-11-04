@@ -254,7 +254,7 @@ body {font-family: 'Muli', sans-serif;}
   </tbody>
 </table><div data-role="module-unsubscribe" class="module" role="module" data-type="unsubscribe" style="color:#444444; font-size:12px; line-height:20px; padding:16px 16px 16px 16px; text-align:Center;" data-muid="4e838cf3-9892-4a6d-94d6-170e474d21e5">
                                           <div class="Unsubscribe--addressLine"><p class="Unsubscribe--senderName" style="font-size:12px; line-height:20px;">{{$mail}}</p><p style="font-size:12px; line-height:20px;"><span class="Unsubscribe--senderAddress">{{$mail}}</span>, <span class="Unsubscribe--senderCity">{{$mail}}</span>, <span class="Unsubscribe--senderState">{{$mail}}</span> <span class="Unsubscribe--senderZip">{{$mail}}</span></p></div>
-                                          <p style="font-size:12px; line-height:20px;"><a class="Unsubscribe--unsubscribeLink" href="{{{$cis}}}" target="_blank" style="">Unsubscribe</a> - <a href="{{{$cis}}}" target="_blank" class="Unsubscribe--unsubscribePreferences" style="">Unsubscribe Preferences</a></p>
+                                          <p style="font-size:12px; line-height:20px;"><a class="Unsubscribe--unsubscribeLink" href="" target="_blank" style="">Unsubscribe</a> - <a href="" target="_blank" class="Unsubscribe--unsubscribePreferences" style="">Unsubscribe Preferences</a></p>
                                         </div><table border="0" cellpadding="0" cellspacing="0" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed;" width="100%" data-muid="550f60a9-c478-496c-b705-077cf7b1ba9a">
     <tbody>
       <tr>
