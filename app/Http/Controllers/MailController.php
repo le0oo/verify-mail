@@ -16,7 +16,7 @@ class MailController extends Controller
         $mail = MailTable::where('hash', $hash)->get();
         $namemail = '';
 
-        if($mail ==! null){
+        if(!$mail){
             if($mail[0]->estado == false){
                 $namemail = $mail[0]->mail;
 
