@@ -29,7 +29,7 @@
                           @case('verificado')
                             <p class="uppercase tracking-wide text-sm font-bold text-gray-700">Su MAIL:</p>
                             <p class="text-3xl text-gray-900">{{$namemail}}</p>
-                            @if($cis)
+                            @if(isset($cis))
                               @foreach($cis as $indice)
                               <p class="uppercase tracking-wide text-sm font-bold text-gray-700">Su CIS:</p>
                               <p class="text-3xl text-gray-900">{{$indice->cistables->cis}}</p>

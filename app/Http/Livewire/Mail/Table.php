@@ -37,14 +37,13 @@ class Table extends Component
                 'listcis'   => CisTable::all()
             ]);
         }else{
-
             return view('livewire.mail.table', [
                 'listmail' => MailTable::select('id','cis','mail','hash','estado','updated_at')
                                 ->where('estado', $this->verificado)
                                 ->where('mail', 'ILIKE', "%{$this->emailsearch}%")
                                 ->where('cis', 'LIKE', "{$this->cissearch}%")
                                 ->paginate(5),
-                                'listcis'   => CisTable::all()
+                'listcis'   => CisTable::all()
             ]);
         }
     }

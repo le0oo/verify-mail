@@ -16,7 +16,7 @@ class Regmail extends Component
 {
 
     public $mail;
-    public $cis;
+    public $cis = [0];
 
     public function render()
     {
@@ -29,7 +29,7 @@ class Regmail extends Component
         $data = [
             'mail' => $this->mail,
             'cis' => $this->cis,
-            'verify_code' => Str::random(25),
+            'verify_code' => Str::random(64),
         ];
 
         $verifymail = VerifyMail::create([

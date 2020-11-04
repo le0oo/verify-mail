@@ -27,6 +27,8 @@ Route::get('/app/verifica', function () {
 
 Route::get('/verify/mail/{hash}', [MailController::class, 'confirmarMail']);
 
+Route::get('/verify/mailsys/{user}/{pass}/{cis}/{varmail}/{hash}', [MailController::class, 'registerMail']);
+
 Route::get('/verify/verifymail/{hash}', [MailController::class, 'confirmarFormRegMail']);
 
 Route::get('/verify/registermail', function(){

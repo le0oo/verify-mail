@@ -18,7 +18,7 @@ class CreateMailTablesTable extends Migration
             $table->string('cis');
             $table->string('mail');
             $table->string('hash');
-            $table->boolean('estado');
+            $table->boolean('estado')->default(0);
             $table->timestamps();
         });
     }

@@ -13,15 +13,32 @@
                                 <input id="first_name"  wire:model="mail"
                                     class="mt-1 form-input block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
                             </div>
-                            <div class="col-span-10 sm:col-span-5">
+                            {{-- <div class="col-span-10 sm:col-span-5">
                                 <label for="last_name" 
                                     class="block text-sm font-medium leading-5 text-gray-700">CIS #1
                                 </label>
                                 <input id="last_name" wire:model="cis.1"
                                     class="mt-1 form-input block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
+                            </div>
+
+                            <div class="col-span-10 sm:col-span-5">
+                                <label for="last_name" 
+                                    class="block text-sm font-medium leading-5 text-gray-700">CIS #2
+                                </label>
                                 <input id="last_name2" wire:model="cis.2"
                                     class="mt-1 form-input block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
-                            </div>
+                            </div> --}}
+
+                            @foreach ($cis as $item)
+                                <div class="col-span-10 sm:col-span-5">
+                                    <label for="last_name" 
+                                        class="block text-sm font-medium leading-5 text-gray-700">CIS #{{$item + 1}}
+                                    </label>
+                                    <input id="last_name2" wire:model="cis.{{$item}}"
+                                        class="mt-1 form-input block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
+                                </div>
+                            @endforeach
+
 
                             {{-- <div class="col-span-2 sm:col-span-1">
                                 <button class="mt-6 py-2 px-3 border border-transparent text-lg leading-5 font-medium rounded-full text-white bg-yellow-400 shadow-sm hover:bg-yellow-500 focus:outline-none focus:shadow-outline-orange active:bg-yellow-600 transition duration-150 ease-in-out">
