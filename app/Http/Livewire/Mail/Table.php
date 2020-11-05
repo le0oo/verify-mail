@@ -27,31 +27,22 @@ class Table extends Component
         //                         // ->where('cis', 'LIKE', "{$this->cissearch}%")
         //                         ->get());
 
-        if($this->verificado === null && $this->cissearch === ''){
-
+        if($this->verificado == null){
             return view('livewire.mail.table', [
+
                 'listmail' => MailTable::select('id','mail','cis','hash','estado','updated_at')
-                                ->where('mail', 'LIKE', "%{$this->emailsearch}%")
+                                ->where('mail', 'LIKE', '%'.$this->emailsearch.'%')
+                                ->where('cis', 'like', '%'.$this->cissearch.'%')
                                 ->paginate(5),
                 'listcis'   => CisTable::all()
             ]);
-        }elseif($this->verificado === null && $this->cissearch ==! null)
-        {
-            return view('livewire.mail.table', [
-                'listmail' => MailTable::select('id','mail','cis','hash','estado','updated_at')
-                                ->where('mail', 'LIKE', "%{$this->emailsearch}%")
-                                ->where('cis', 'LIKE', "{$this->cissearch}%")
-                                ->paginate(5),
-                'listcis'   => CisTable::all()
-            ]);
-
         }else        
         {
             return view('livewire.mail.table', [
                 'listmail' => MailTable::select('id','cis','mail','hash','estado','updated_at')
                                 ->where('estado', $this->verificado)
-                                ->where('mail', 'LIKE', "%{$this->emailsearch}%")
-                                ->where('cis', 'LIKE', "{$this->cissearch}%")
+                                ->where('mail', 'LIKE', '%'.$this->emailsearch.'%')
+                                ->where('cis', 'like', '%'.$this->cissearch.'%')
                                 ->paginate(5),
                 'listcis'   => CisTable::all()
             ]);

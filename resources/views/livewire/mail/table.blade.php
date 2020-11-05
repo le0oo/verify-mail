@@ -5,7 +5,7 @@
                 <div class="bg-white px-4 py-3 flex items-center justify-around border-t border-gray-200 sm:px-6">
                     <div>
                         <label class="mr-3" for="email">Email</label>
-                        <input class="form-input rounded-md shadow-sm mt-1" wire:model="emailsearch" type="text">
+                        <input class="form-input rounded-md shadow-sm mt-1" wire:model.debounce.500ms="emailsearch" type="text">
                     </div>
                     <div>
                         <label class="mr-3" for="estado">Estado</label>
@@ -18,7 +18,7 @@
                     </div>
                     <div>
                         <label class="mr-3" for="email">CIS</label>
-                        <input class="form-input rounded-md shadow-sm mt-1" wire:model="cissearch" type="text">
+                        <input class="form-input rounded-md shadow-sm mt-1" wire:model.debounce.500ms="cissearch" type="text">
                     </div>
                     <div>
                         <button wire:click.prevent="limpiarfiltro()" type="button"

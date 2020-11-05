@@ -95,28 +95,31 @@ class MailController extends Controller
     {
         $mail = MailTable::where('hash', $hash)->first();
         $namemail = '';
-
-        if($mail->estado == false)
-        {
-            $namemail = $mail->mail;
-            $mail->estado = true;
-            $mail->update();
-
-            return view('mail.confirmacion-mail', [
-                    'mensaje' => 'Mail Verificado', 
-                    'verificado' => 'verificado',
-                    'namemail' => $namemail
-                ]);
-
-        }elseif($mail->estado == true)
-        {
-            $namemail = $mail->mail;
-            return view('mail.confirmacion-mail', [
-                'mensaje'=>'Su Mail ya a sido Verificado', 
-                'verificado'=>'yaverificado',
-                'namemail' => $namemail
-                ]);
         
+        if($mail)
+        {
+            if($mail->estado == false)
+            {
+                $namemail = $mail->mail;
+                $mail->estado = true;
+                $mail->update();
+
+                return view('mail.confirmacion-mail', [
+                        'mensaje' => 'Mail Verificado', 
+                        'verificado' => 'verificado',
+                        'namemail' => $namemail
+                    ]);
+
+            }elseif($mail->estado == true)
+            {
+                $namemail = $mail->mail;
+                return view('mail.confirmacion-mail', [
+                    'mensaje'=>'Su Mail ya a sido Verificado', 
+                    'verificado'=>'yaverificado',
+                    'namemail' => $namemail
+                    ]);
+            
+            }
         }else
         {
             return view('mail.confirmacion-mail', [
@@ -147,7 +150,7 @@ class MailController extends Controller
 
         if ($user === "sysadmin" && $pass ==="SaleVale"){
 
-            dd($varmail,$hash);
+            // dd($varmail,$hash);
 
             $mailtable = MailTable::create([
                 'mail' => $varmail,
