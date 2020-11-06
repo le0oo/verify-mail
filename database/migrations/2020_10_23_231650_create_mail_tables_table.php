@@ -15,7 +15,7 @@ class CreateMailTablesTable extends Migration
     {
         Schema::create('mail_tables', function (Blueprint $table) {
             $table->id();
-            $table->string('cis')->default('')->nullable();
+            $table->string('cis')->nullable();
             $table->string('mail');
             $table->string('hash');
             $table->boolean('estado')->default(0);
