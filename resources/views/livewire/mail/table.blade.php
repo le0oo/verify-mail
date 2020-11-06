@@ -63,7 +63,7 @@
                             <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                                 Fecha Verificado
                             </th>
-                            <th class="px-6 py-3 bg-gray-50"></th>
+                            {{-- <th class="px-6 py-3 bg-gray-50"></th> --}}
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
@@ -97,32 +97,38 @@
                             <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
                                 {{$index->updated_at}}
                             </td>
-                            <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+                            {{-- <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
                                 <button disabled class="text-indigo-600 hover:text-indigo-900">+Info</button>
-                                {{-- <a href="#" class="text-indigo-600 hover:text-indigo-900" disabled>+Info</a> --}}
-                            </td>
+                                <a href="#" class="text-indigo-600 hover:text-indigo-900" disabled>+Info</a>
+                            </td> --}}
                         </tr>
                         @endforeach
 
                         <!-- More rows... -->
                     </tbody>
                     </table>
-                    @if($listmail->count() > 4)
+                    @if($listmail->count())
+                        {{-- @if($listmail->count() >= 5 or $this->page =! 1) --}}
+                            <div class="bg-white px-4 py-3 border-t border-gray-200 sm:px-6">
+                                {{ $listmail->links() }}
+                            </div>
+                        {{-- @endif --}}
                         <div class="bg-white px-4 py-3 border-t border-gray-200 sm:px-6">
-                            {{ $listmail->links() }}
+                            <label for="export">Exportar</label>
+                            <button wire:click.prevent="export('excel')" type="button"
+                            class="inline-flex justify-center rounded-md border border-transparent px-2 py-1 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                                Excel
+                            </button>
+                            <button wire:click.prevent="export('csv')" type="button"
+                            class="inline-flex justify-center rounded-md border border-transparent px-2 py-1 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                                CSV
+                            </button>
+                        </div>
+                    @else
+                        <div class="bg-white px-4 py-3 border-t border-gray-200 sm:px-6">
+                            No Existen Resultados
                         </div>
                     @endif
-                    <div class="bg-white px-4 py-3 border-t border-gray-200 sm:px-6">
-                        <label for="export">Exportar</label>
-                        <button wire:click.prevent="export('excel')" type="button"
-                        class="inline-flex justify-center rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">
-                            Excel
-                        </button>
-                        <button wire:click.prevent="export('csv')" type="button"
-                        class="inline-flex justify-center rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">
-                            CSV
-                        </button>
-                    </div>
                 </div>
             </div>
         </div>
