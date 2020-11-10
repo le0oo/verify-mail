@@ -27,7 +27,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="bg-white px-4 py-3 flex items-center justify-around border-t border-gray-200 sm:px-6">
+                {{-- <div class="bg-white px-4 py-3 flex items-center justify-around border-t border-gray-200 sm:px-6">
                     <div>
                         <label class="font-bold mb-1 text-gray-700 block" for="estado">Estado</label>
                         <select name="verificado" class="appearance-none bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 mt-1"
@@ -52,8 +52,8 @@
                         >
                         </x-datepicker>
                     </div>
-                        {{-- {{$dateHasta}} --}}
-                </div>
+                        {{$dateHasta}}
+                </div> --}}
                 <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                     <table class="min-w-full divide-y divide-gray-200">
                     <thead>

@@ -61,7 +61,7 @@ class Table extends Component
         $this->verificado=null;
         $this->emailsearch='';
         $this->cissearch='';
-        $this->dateDesde->resetPage();
+        // $this->dateDesde->resetPage();
         $this->resetPage();
     }
 
