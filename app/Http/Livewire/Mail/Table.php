@@ -43,9 +43,9 @@ class Table extends Component
         {
             return view('livewire.mail.table', [
                 'listmail' => MailTable::select('id','cis','mail','hash','estado','updated_at')
-                                ->where('estado','=' , $this->verificado)
                                 ->where('mail', 'LIKE', '%'.$this->emailsearch.'%')
                                 ->where('cis', 'like', '%'.$this->cissearch.'%')
+                                ->where('estado','=' , $this->verificado)
                                 ->paginate(5),
                 'listcis'   => CisTable::all()
             ]);
@@ -79,9 +79,9 @@ class Table extends Component
                 else
                     {
                         $export = new MailsExport([MailTable::select('id','cis','mail','hash','estado','updated_at')
-                                                ->where('estado', '=', $this->verificado)
                                                 ->where('mail', 'LIKE', "%{$this->emailsearch}%")
                                                 ->where('cis', 'LIKE', "{$this->cissearch}%")
+                                                ->where('estado','=' , $this->verificado)
                                                 ->get()]);
 
                     }
@@ -99,9 +99,9 @@ class Table extends Component
                 else
                 {
                     $export = new MailsExport([MailTable::select('id','cis','mail','hash','estado','updated_at')
-                                            ->where('estado', '=', $this->verificado)
                                             ->where('mail', 'LIKE', "%{$this->emailsearch}%")
                                             ->where('cis', 'LIKE', "{$this->cissearch}%")
+                                            ->where('estado','=' , $this->verificado)
                                             ->get()]);
     
                 }
