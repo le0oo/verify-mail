@@ -10,7 +10,7 @@
                     <div>
                         <label class="font-bold mb-1 text-gray-700 block" for="estado">Estado</label>
                         <select name="verificado" class="appearance-none bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 mt-1"
-                            wire:model="verificado">
+                            wire:model.debounce.500ms="verificado">
                             <option value="null" disabled selected>Seleccione un Tipo...</option>
                             <option value="true">Verificado</option>
                             <option value="false">Pendiente</option>
