@@ -20,6 +20,7 @@ class Table extends Component
     public $cissearch;
     public $taskduedate;
     public $deal;
+    public $dateDesde, $dateHasta;
 
     public function render()
     {
@@ -60,6 +61,7 @@ class Table extends Component
         $this->verificado=null;
         $this->emailsearch='';
         $this->cissearch='';
+        $this->dateDesde->resetPage();
         $this->resetPage();
     }
 

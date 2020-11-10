@@ -37,27 +37,23 @@
                             <option value="false">Pendiente</option>
                         </select>
                     </div>
-                    <div>                        
-                        <x-datepicker />
-                    </div>
-                    <div>                        
-                        <x-datepicker />
-                    </div>
-                </div>
-                {{-- <div class="bg-white px-4 py-3  flex items-center justify-around border-t border-gray-200 sm:px-6">
                     <div>
-                        <label class="mr-5" for="export">Fecha de verificacion</label>
-                        <label class="mr-2" for="export">Desde:</label>
-                        <input class="form-input rounded-md shadow-sm mt-1 mr-2" wire:model="datesearch" type="text">
-                        <label class="mr-2" for="export">Hasta:</label>
-                        <input class="form-input rounded-md shadow-sm mt-1 mr-2" wire:model="emailsearch" type="text">
+                        <x-datepicker 
+                            label="Desde"
+                            wire:model="dateDesde"
+                        >
+                        </x-datepicker>
                     </div>
-                    <button wire:click.prevent="limpiarfiltro()" type="button"
-                    class="inline-flex justify-center rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">
-                        Limpiar Filtro
-                    </button>
-                </div> --}}
-
+                        {{$dateDesde}}
+                    <div>                        
+                        <x-datepicker 
+                            label="Hasta"
+                            wire:model="dateHasta"
+                        >
+                        </x-datepicker>
+                    </div>
+                        {{-- {{$dateHasta}} --}}
+                </div>
                 <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                     <table class="min-w-full divide-y divide-gray-200">
                     <thead>
@@ -123,15 +119,12 @@
                         </tr>
                         @endforeach
 
-                        <!-- More rows... -->
                     </tbody>
                     </table>
                     @if($listmail->count())
-                        {{-- @if($listmail->count() >= 5 or $this->page =! 1) --}}
-                            <div class="bg-white px-4 py-3 border-t border-gray-200 sm:px-6">
-                                {{ $listmail->links() }}
-                            </div>
-                        {{-- @endif --}}
+                        <div class="bg-white px-4 py-3 border-t border-gray-200 sm:px-6">
+                            {{ $listmail->links() }}
+                        </div>
                         <div class="bg-white px-4 py-3 border-t border-gray-200 sm:px-6">
                             <label for="export">Exportar</label>
                             <button wire:click.prevent="export('excel')" type="button"

@@ -4,21 +4,23 @@
             display: none;
         }
         </style>
-        <div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak>
+        <div x-data="app()" x-init="[initDate(), getNoOfDays()]" {{$atribbutes}} x-cloak>
             {{-- <div class="container mx-auto px-4 py-2 md:py-10"> --}}
                 <div class="mb-5 w-64">
 
-                    <label for="datepicker" class="font-bold mb-2 text-gray-700 block">Desde</label>
+                <label for="datepicker" class="font-bold mb-2 text-gray-700 block">{{$label}}</label>
                     <div class="relative">
                         <input type="hidden" name="date" x-ref="date">
                         <input 
                             type="text"
                             readonly
                             x-model="datepickerValue"
+                            {{-- x-on:blur="$dispatch('input', datepickerValue)" --}}
                             @click="showDatepicker = !showDatepicker"
                             @keydown.escape="showDatepicker = false"
                             class="w-full pl-4 pr-10 py-3 leading-none rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                            placeholder="Select date">
+                            placeholder="Seleccionar Fecha"
+                            >
 
                             <div class="absolute top-0 right-0 px-3 py-2">
                                 <svg class="h-6 w-6 text-gray-400"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -121,8 +123,8 @@
                         let today = new Date();
                         this.month = today.getMonth();
                         this.year = today.getFullYear();
-                        this.datepickerValue = ''
-                        // new Date(this.year, this.month, today.getDate()).toDateString();
+                        // this.datepickerValue = ''
+                        this.datepickerValue = new Date(this.year, this.month, today.getDate()).toDateString();
                     },
 
                     isToday(date) {
