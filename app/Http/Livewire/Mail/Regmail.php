@@ -23,7 +23,6 @@ class Regmail extends Component
         return view('livewire.mail.regmail');
     }
 
-
     public function store()
     {
         $data = [

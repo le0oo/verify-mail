@@ -18,6 +18,8 @@ class Table extends Component
     public $emailsearch;
     public $datasearch;
     public $cissearch;
+    public $taskduedate;
+    public $deal;
 
     public function render()
     {
@@ -105,5 +107,13 @@ class Table extends Component
                 break;
         }
 
+    }
+
+    public function addTask()
+    {
+        $this->deal->tasks()->create([
+            'tasktext' => $this->tasktext,
+            'taskduedate' => $this->taskduedate,
+        ]);
     }
 }

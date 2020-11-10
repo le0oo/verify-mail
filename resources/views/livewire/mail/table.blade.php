@@ -4,11 +4,11 @@
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                 <div class="bg-white px-4 py-3 flex items-center justify-around border-t border-gray-200 sm:px-6">
                     <div>
-                        <label class="mr-3" for="email">Email</label>
+                        <label class="font-bold mb-1 text-gray-700 block" for="email">Email</label>
                         <input class="form-input rounded-md shadow-sm mt-1" wire:model.debounce.500ms="emailsearch" type="text">
                     </div>
                     <div>
-                        <label class="mr-3" for="estado">Estado</label>
+                        <label class="font-bold mb-1 text-gray-700 block" for="estado">Estado</label>
                         <select name="verificado" class="appearance-none bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 mt-1"
                             wire:model="verificado">
                             <option value="null" disabled selected>Seleccione un Tipo...</option>
@@ -17,7 +17,7 @@
                         </select>
                     </div>
                     <div>
-                        <label class="mr-3" for="email">CIS</label>
+                        <label class="font-bold mb-1 text-gray-700 block" for="email">CIS</label>
                         <input class="form-input rounded-md shadow-sm mt-1" wire:model.debounce.500ms="cissearch" type="text">
                     </div>
                     <div>
@@ -25,6 +25,23 @@
                         class="inline-flex justify-center rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">
                             Limpiar Filtro
                         </button>
+                    </div>
+                </div>
+                <div class="bg-white px-4 py-3 flex items-center justify-around border-t border-gray-200 sm:px-6">
+                    <div>
+                        <label class="font-bold mb-1 text-gray-700 block" for="estado">Estado</label>
+                        <select name="verificado" class="appearance-none bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 mt-1"
+                            wire:model="verificado">
+                            <option value="null" disabled selected>Seleccione un Tipo...</option>
+                            <option value="true">Verificado</option>
+                            <option value="false">Pendiente</option>
+                        </select>
+                    </div>
+                    <div>                        
+                        <x-datepicker />
+                    </div>
+                    <div>                        
+                        <x-datepicker />
                     </div>
                 </div>
                 {{-- <div class="bg-white px-4 py-3  flex items-center justify-around border-t border-gray-200 sm:px-6">
