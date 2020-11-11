@@ -33,7 +33,7 @@ class Table extends Component
         if($this->verificado == null){
             return view('livewire.mail.table', [
 
-                'listmail' => MailTable::select('id','mail','cis','hash','estado','updated_at')
+                'listmail' => MailTable::select('id','mail','cis','hash','estado','created_at','updated_at')
                                 ->where('mail', 'LIKE', '%'.$this->emailsearch.'%')
                                 ->where('cis', 'like', '%'.$this->cissearch.'%')
                                 ->paginate(5),
@@ -42,7 +42,7 @@ class Table extends Component
         }else        
         {
             return view('livewire.mail.table', [
-                'listmail' => MailTable::select('id','cis','mail','hash','estado','updated_at')
+                'listmail' => MailTable::select('id','cis','mail','hash','estado','created_at','updated_at')
                                 ->where('mail', 'LIKE', '%'.$this->emailsearch.'%')
                                 ->where('cis', 'like', '%'.$this->cissearch.'%')
                                 ->where('estado','=' , $this->verificado)
@@ -71,14 +71,14 @@ class Table extends Component
             case "excel":
                 if($this->verificado === null)
                     {
-                        $export = new MailsExport([MailTable::select('id','cis','mail','hash','estado','updated_at')
+                        $export = new MailsExport([MailTable::select('id','cis','mail','hash','estado','created_at','updated_at')
                                                 ->where('mail', 'LIKE', "%{$this->emailsearch}%")
                                                 ->where('cis', 'LIKE', "{$this->cissearch}%")
                                                 ->get()]);
                     }
                 else
                     {
-                        $export = new MailsExport([MailTable::select('id','cis','mail','hash','estado','updated_at')
+                        $export = new MailsExport([MailTable::select('id','cis','mail','hash','estado','created_at','updated_at')
                                                 ->where('mail', 'LIKE', "%{$this->emailsearch}%")
                                                 ->where('cis', 'LIKE', "{$this->cissearch}%")
                                                 ->where('estado','=' , $this->verificado)
@@ -91,14 +91,14 @@ class Table extends Component
             case "csv":
                 if($this->verificado === null)
                 {
-                    $export = new MailsExport([MailTable::select('id','cis','mail','hash','estado','updated_at')
+                    $export = new MailsExport([MailTable::select('id','cis','mail','hash','estado','created_at','updated_at')
                                             ->where('mail', 'LIKE', "%{$this->emailsearch}%")
                                             ->where('cis', 'LIKE', "{$this->cissearch}%")
                                             ->get()]);
                 }
                 else
                 {
-                    $export = new MailsExport([MailTable::select('id','cis','mail','hash','estado','updated_at')
+                    $export = new MailsExport([MailTable::select('id','cis','mail','hash','estado','created_at','updated_at')
                                             ->where('mail', 'LIKE', "%{$this->emailsearch}%")
                                             ->where('cis', 'LIKE', "{$this->cissearch}%")
                                             ->where('estado','=' , $this->verificado)
