@@ -150,8 +150,6 @@ class MailController extends Controller
 
         if ($user === "sysadmin" && $pass ==="SaleVale"){
 
-            // dd($varmail,$hash);
-
             $mailtable = MailTable::create([
                 'mail' => $varmail,
                 'hash' => $hash,
