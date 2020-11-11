@@ -23,7 +23,7 @@
                     <div>
                         <button wire:click.prevent="limpiarfiltro()" type="button"
                         class="inline-flex justify-center rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">
-                            Limpiar Filtro
+                            Refrescar Formulario
                         </button>
                     </div>
                 </div>
@@ -110,7 +110,13 @@
                                 {{$index->created_at}}
                             </td>
                             <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-                                {{$index->updated_at}}
+                                @if($index->created_at == $index->updated_at)
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                                    Pendiente
+                                </span>           
+                                @else
+                                    {{$index->updated_at}}
+                                @endif
                             </td>
                             {{-- <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
                                 <button disabled class="text-indigo-600 hover:text-indigo-900">+Info</button>
