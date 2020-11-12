@@ -71,6 +71,9 @@ class Regmail extends Component
             $message->to($data['mail'], "Grupo Servicios Junin") -> subject('Verificacion de Factura Digital');
         });
 
+        $this->mail = '';
+        $this->cis = [0 => null];
+
         session()->flash('message', 'Verificar Mail en correo electronico...');
 
     }
