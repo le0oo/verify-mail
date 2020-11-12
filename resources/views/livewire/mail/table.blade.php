@@ -26,12 +26,10 @@
                         <label class="font-bold mb-1 text-gray-700 block" for="email">Desde</label>
                         <input class="form-input rounded-md shadow-sm mt-1" wire:model.debounce.500ms="dateDesde" type="date" placeholder="Seleccione Fecha">
                     </div>
-                        {{-- {{$dateDesde}} --}}
                     <div>                        
                         <label class="font-bold mb-1 text-gray-700 block" for="email">Hasta</label>
                         <input class="form-input rounded-md shadow-sm mt-1" wire:model.debounce.500ms="dateHasta" type="date" placeholder="Seleccione Fecha">
                     </div>
-                        {{-- {{$dateHasta}} --}}
                     <div>
                         <button wire:click.prevent="limpiarfiltro()" type="button"
                         class="inline-flex justify-center rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">
@@ -95,7 +93,7 @@
                                 {{$index->created_at}}
                             </td>
                             <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-                                @if($index->created_at == $index->updated_at)
+                                @if($index->created_at == $index->updated_at && !$index->estado )
                                 <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
                                     Pendiente
                                 </span>           

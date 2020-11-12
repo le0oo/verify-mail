@@ -35,7 +35,6 @@ Route::get('/verify/mailsys/morecis/{user}/{pass}/{cis}/{varmail}/{hash}', [Mail
 
 Route::get('/verify/mailsys/{user}/{pass}/{varmail}/{hash}', [MailController::class, 'registerMailsincis']);
 
-
 Route::get('/verify/registermail', function(){
     return view('mail.register-mail');
 });

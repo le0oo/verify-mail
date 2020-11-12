@@ -16,7 +16,8 @@ class Regmail extends Component
 {
 
     public $mail;
-    public $cis = [0];
+    public $cis = [0 => null];
+    
 
     public function render()
     {
@@ -55,14 +56,23 @@ class Regmail extends Component
         });
         
 
-        $this->mail = '';
-        $this->cis[1] = '';
-        $this->cis[2] = '';
+        // $this->mail = '';
+        // $this->cis[1] = '';
+        // $this->cis[2] = '';
 
         session()->flash('message', 'Verificar Mail en correo electronico...');
 
         // return $mail;
 
+    }
+
+    public function agregarCis()
+    {
+        array_push($this->cis, null);
+        // $this->cis[] = null;
+        // $this->cis = [$var++ => null];
+        // dd($this->cis);
+        // $this->render();
     }
 
 }
