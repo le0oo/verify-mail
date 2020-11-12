@@ -2,11 +2,13 @@
 
 namespace App\Http\Livewire\Mail;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use App\Models\CisTable;
 use App\Models\VerifyMail;
 use App\Models\CisMail;
 use App\Models\MailTable;
+
 
 use Illuminate\Http\Request;
 
@@ -18,6 +20,17 @@ class Regmail extends Component
     public $mail;
     public $cis = [0 => null];
     
+    protected $rules = [        
+        'mail' => 'required|email',
+        'cis.*' => 'required',
+    ];
+
+    protected $messages = [
+        'mail.required' => 'Debe Completar el campo Email',
+        'mail.email' => 'El email no es correcto',
+        'cis.*.required' => 'Debe Completar el campo CIS',
+    ];
+
 
     public function render()
     {
@@ -26,17 +39,20 @@ class Regmail extends Component
 
     public function store()
     {
+
+        $this->validate();
+
         $data = [
             'mail' => $this->mail,
             'cis' => $this->cis,
             'verify_code' => Str::random(64),
         ];
-
+        
         $verifymail = VerifyMail::create([
             'mail' => $data['mail'],
             'verify_code' => $data['verify_code'],
         ]);
-        
+
         foreach($data['cis'] as $key => $value)
         {
             $cistable = CisTable::create([
@@ -54,25 +70,18 @@ class Regmail extends Component
         {
             $message->to($data['mail'], "Grupo Servicios Junin") -> subject('Verificacion de Factura Digital');
         });
-        
-
-        // $this->mail = '';
-        // $this->cis[1] = '';
-        // $this->cis[2] = '';
 
         session()->flash('message', 'Verificar Mail en correo electronico...');
-
-        // return $mail;
 
     }
 
     public function agregarCis()
     {
         array_push($this->cis, null);
-        // $this->cis[] = null;
-        // $this->cis = [$var++ => null];
-        // dd($this->cis);
-        // $this->render();
+    }
+    public function eliminarCis()
+    {
+        array_pop($this->cis);
     }
 
 }
