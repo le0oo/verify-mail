@@ -39,6 +39,10 @@ Route::get('/verify/registermail', function(){
     return view('mail.register-mail');
 });
 
+Route::get('/verify/pruebaconfirmacion', function(){
+    return view('mail.confirmacion-verifymail');
+});
+
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     
     /* Dashboard */
