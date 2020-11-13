@@ -333,7 +333,7 @@ ul.social li{
           		<tr>
           			<td style="text-align: center;">
                   <h1 style="margin: 0;">
-                    <a style="color: #30e3ca; font-size: 24px; font-weight: 700; font-family: 'Lato', sans-serif;" href="#">Verificacion</a>
+                    <a style="color: #30e3ca; font-size: 24px; font-weight: 700; font-family: 'Lato', sans-serif;" href="{{url('/verify/verifymail')}}">Verificacion</a>
                   </h1>
 			          </td>
           		</tr>
