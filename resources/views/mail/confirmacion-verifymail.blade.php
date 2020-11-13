@@ -406,7 +406,7 @@ ul.social li{
             			<div style="position: relative; z-index: 0; color: rgba(0,0,0,.3);padding: 0 2.5em; text-align: center;">
             				<h2 style="color: #000; font-size: 40px; margin-bottom: 0; font-weight: 400; line-height: 1.4;">Por favor Verifique su Email</h2>
             				<h3 style="font-size: 24px; font-weight: 300;">Haga click en el siguiente boton para verificar.</h3>
-            				<p><a href="{{url('/verify/verifymail')}}" style="padding: 10px 15px; display: inline-block; border-radius: 5px; background: #30e3ca; color: #ffffff;">Verificar</a></p>
+            				<p><a href="{{url('/verify/verifymail/'. $verify_code)}}" style="padding: 10px 15px; display: inline-block; border-radius: 5px; background: #30e3ca; color: #ffffff;">Verificar</a></p>
             			</div>
             		</td>
             	</tr>
