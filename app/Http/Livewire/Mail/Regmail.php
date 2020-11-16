@@ -82,9 +82,14 @@ class Regmail extends Component
     {
         array_push($this->cis, null);
     }
+
     public function eliminarCis()
     {
-        array_pop($this->cis);
-    }
+        // dd(count($this->cis));
 
+        if(count($this->cis) > 1)
+        {
+            array_pop($this->cis);
+        }
+    }
 }

@@ -25,13 +25,14 @@
                                     @error('cis.'.$item) <span class="text-red-500">{{ $message }}</span>@enderror
                                 </div>
                             @endforeach
-
-                            <div class="col-span-2 sm:col-span-1">
-                                <button wire:click.prevent="eliminarCis()" type="button"
-                                    class="mt-6 py-2 px-3 border border-transparent text-lg leading-5 font-medium rounded-full text-white bg-yellow-400 shadow-sm hover:bg-yellow-500 focus:outline-none focus:shadow-outline-orange active:bg-yellow-600 transition duration-150 ease-in-out">
-                                    -
-                                </button>
-                            </div>
+                            @if(count($this->cis) > 1)
+                                <div class="col-span-2 sm:col-span-1">
+                                    <button wire:click.prevent="eliminarCis()" type="button"
+                                        class="mt-6 py-2 px-3 border border-transparent text-lg leading-5 font-medium rounded-full text-white bg-yellow-400 shadow-sm hover:bg-yellow-500 focus:outline-none focus:shadow-outline-orange active:bg-yellow-600 transition duration-150 ease-in-out">
+                                        -
+                                    </button>
+                                </div>
+                            @endif
                             <div class="col-span-2 sm:col-span-1">
                                 <button wire:click.prevent="agregarCis()" type="button"
                                     class="mt-6 py-2 px-3 border border-transparent text-lg leading-5 font-medium rounded-full text-white bg-yellow-400 shadow-sm hover:bg-yellow-500 focus:outline-none focus:shadow-outline-orange active:bg-yellow-600 transition duration-150 ease-in-out">
