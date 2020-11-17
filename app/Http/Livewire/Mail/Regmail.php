@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use App\Models\CisTable;
+// use App\Models\TableSystemCis;
 use App\Models\VerifyMail;
 use App\Models\CisMail;
 use App\Models\MailTable;
@@ -22,13 +23,15 @@ class Regmail extends Component
     
     protected $rules = [        
         'mail' => 'required|email',
-        'cis.*' => 'required',
+        'cis.*' => 'required|numeric|exists:App\Models\TableSystemCis,cis',
     ];
 
     protected $messages = [
         'mail.required' => 'Debe Completar el campo Email',
         'mail.email' => 'El email no es correcto',
         'cis.*.required' => 'Debe Completar el campo CIS',
+        'cis.*.numeric' => 'CIS mal ingresado',
+        'cis.*.exists' => 'El CIS no existe',
     ];
 
 

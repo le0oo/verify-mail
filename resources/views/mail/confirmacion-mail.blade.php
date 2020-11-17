@@ -28,7 +28,7 @@
                         @switch($verificado)
                           @case('verificado')
                             <p class="uppercase tracking-wide text-sm font-bold text-gray-700">Su MAIL:</p>
-                            <p class="text-3xl text-gray-900">{{$namemail}}</p>
+                            <p class="text-base text-gray-900">{{$namemail}}</p>
                             @if(isset($cis))
                               @foreach($cis as $indice)
                               <p class="uppercase tracking-wide text-sm font-bold text-gray-700">Su CIS:</p>
@@ -36,14 +36,14 @@
                               @endforeach
                             @endif
                             <div class="items-center text-center mb-2 mt-2">
-                                  <span class="rounded-full bg-green-500 uppercase px-2 py-1 text-xs font-bold">Se a verificado</span>
+                                  <span class="rounded-full bg-green-500 uppercase px-2 py-1 text-xs font-bold">Verificado</span>
                             </div>
                             @break
                           @case('yaverificado')
                             <p class="uppercase tracking-wide text-sm font-bold text-gray-700">Su MAIL:</p>
-                            <p class="text-3xl text-gray-900">{{$namemail}}</p>
+                            <p class="text-base text-gray-900">{{$namemail}}</p>
                             <div class="items-center text-center mb-2 mt-2">
-                                  <span class="rounded-full bg-yellow-500 uppercase px-2 py-1 text-xs font-bold">Ya se a verificado</span>
+                                  <span class="rounded-full bg-yellow-500 uppercase px-2 py-1 text-xs font-bold">Verificado</span>
                             </div>
                             @break
                           @case('error')

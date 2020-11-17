@@ -74,8 +74,8 @@
                                 </div>
                             </td>
                             <td class="px-6 py-4 whitespace-no-wrap">
-                                <div class="text-xs leading-5 text-gray-900">
-                                    {{$index->hash}}
+                                <div class="text-sm leading-5 text-gray-900">
+                                    {{substr($index->hash, 0, 17)}}...
                                 </div>
                             </td>
                             <td class="px-6 py-4 whitespace-no-wrap">
