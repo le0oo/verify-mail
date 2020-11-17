@@ -56,7 +56,7 @@
                       <div class="flex items-center justify-center p-4 border-t border-gray-300 text-gray-700">
                           <div class="flex items-center">
                               <span class="text-blue-900 font-bold">
-                                <a href="www.grupojunin.com.ar">www.grupojunin.com.ar</a>
+                                <a href="https://www.grupojunin.com.ar/">www.grupojunin.com.ar</a>
                               </span>
                           </div>
                       </div>
