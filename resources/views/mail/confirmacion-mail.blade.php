@@ -48,7 +48,7 @@
                             @break
                           @case('error')
                             <div class="items-center text-center mb-2 mt-2">
-                                  <span class="rounded-full bg-red-500 uppercase px-2 py-1 text-xs font-bold">Error de verificacion</span>
+                                  <span class="rounded-full bg-red-500 uppercase px-2 py-1 text-xs font-bold">Error de verificación</span>
                             </div>
                             @break
                         @endswitch
