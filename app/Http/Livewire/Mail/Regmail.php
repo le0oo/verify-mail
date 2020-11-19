@@ -18,20 +18,25 @@ use Livewire\Component;
 class Regmail extends Component
 {
 
-    public $mail;
+    public $mail, $name, $ntelefono;
     public $cis = [0 => null];
     
-    protected $rules = [        
+    protected $rules = [
+        'name' => 'required',
+        'ntelefono' => 'required',
         'mail' => 'required|email',
-        'cis.*' => 'required|numeric|exists:App\Models\TableSystemCis,cis',
+        'cis.*' => 'required|numeric',
+        // 'cis.*' => 'required|numeric|exists:App\Models\TableSystemCis,cis',
     ];
 
     protected $messages = [
-        'mail.required' => 'Debe Completar el campo Email',
+        'name.required' => 'Debe completar el nombre',
+        'ntelefono.required' => 'Debe completar el telefono',
+        'mail.required' => 'Debe Completar el Email',
         'mail.email' => 'El email no es correcto',
         'cis.*.required' => 'Debe Completar el campo CIS',
         'cis.*.numeric' => 'CIS mal ingresado',
-        'cis.*.exists' => 'El CIS no existe',
+        // 'cis.*.exists' => 'El CIS no existe',
     ];
 
 
@@ -42,6 +47,7 @@ class Regmail extends Component
 
     public function store()
     {
+        // dd($this->cis);
 
         $this->validate();
 
@@ -86,13 +92,14 @@ class Regmail extends Component
         array_push($this->cis, null);
     }
 
-    public function eliminarCis()
+    public function eliminarCis($id)
     {
-        // dd(count($this->cis));
+        unset($this->cis[$id]);
 
-        if(count($this->cis) > 1)
-        {
-            array_pop($this->cis);
+        $array = [];
+        foreach($this->cis as $key => $value){
+            array_push($array, $value);
         }
+        $this->cis = $array;
     }
 }
