@@ -81,10 +81,7 @@
                                 </div>
                             </div>
                         @endif
-
-
                     </div>
-
                 </div>
                 <div class="px-0 py-2 mt-2 bg-white-50 text-right">
                     <button wire:click.prevent="store()" type="button"
@@ -104,7 +101,7 @@
             <div class="flex justify-center">
                 <div>
                     <a href=""
-                    class="py-2 px-4 mt-5 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-purple-600 shadow-sm hover:bg-purple-500 focus:outline-none focus:shadow-outline-blue active:bg-purple-600 transition duration-500 ease-in-out bg-green-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110 ">
+                    class="py-2 px-4 mt-5 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-green-600 shadow-sm hover:bg-green-500 focus:outline-none focus:shadow-outline-blue active:bg-green-600 transition duration-150 ease-in-out">
                         Registrar nuevo servicio
                     </a>
                 </div>
