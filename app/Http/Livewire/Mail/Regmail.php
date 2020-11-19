@@ -18,7 +18,7 @@ use Livewire\Component;
 class Regmail extends Component
 {
 
-    public $mail, $name, $ntelefono;
+    public $mail, $name, $ntelefono, $registed = false;
     public $cis = [0 => null];
     
     protected $rules = [
@@ -32,9 +32,9 @@ class Regmail extends Component
     protected $messages = [
         'name.required' => 'Debe completar el nombre',
         'ntelefono.required' => 'Debe completar el telefono',
-        'mail.required' => 'Debe Completar el Email',
+        'mail.required' => 'Debe completar el Email',
         'mail.email' => 'El email no es correcto',
-        'cis.*.required' => 'Debe Completar el campo CIS',
+        'cis.*.required' => 'Debe completar el campo CIS',
         'cis.*.numeric' => 'CIS mal ingresado',
         // 'cis.*.exists' => 'El CIS no existe',
     ];
@@ -77,13 +77,17 @@ class Regmail extends Component
 
         Mail::send('mail.confirmacion-verifymail', $data, function($message) use ($data) 
         {
-            $message->to($data['mail'], "Grupo Servicios Junin") -> subject('Verificacion de Factura Digital');
+            $message->to($data['mail'], "Grupo Servicios Junin S.A.") -> subject('Verificación de Factura Digital');
         });
 
+        $this->name = '';
+        $this->ntelefono = '';
         $this->mail = '';
         $this->cis = [0 => null];
 
-        session()->flash('message', 'Verificar Mail en correo electronico...');
+        // session()->flash('message', 'Verificar Email en correo electronico...');
+
+        return $this->registed = true;
 
     }
 

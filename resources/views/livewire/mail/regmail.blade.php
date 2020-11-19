@@ -1,6 +1,7 @@
 <div>
     <div class="mt-10 sm:mt-2">
-        <div class="mt-5 mr-5 mb-5 ml-5 md:mt-5 md:col-span-2">
+        <div class="mt-5 mr-5 mb-1 ml-5 md:mt-5 md:col-span-2">
+        @if(!$registed)
             <div>
                 <p class="text-gray-700 text-opacity-50 text-center font-serif italic mb-2">
                     Datos Personales    
@@ -92,6 +93,23 @@
                     </button>
                 </div>
             </div>
+        @elseif($registed)
+            <div class="flex justify-center">
+                <div>
+                    <p class="text-green-600 text-3xl text-center mb-5">
+                        Gracias por adherirse a la factura digital
+                    </p>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div>
+                    <a href=""
+                    class="py-2 px-4 mt-5 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-purple-600 shadow-sm hover:bg-purple-500 focus:outline-none focus:shadow-outline-blue active:bg-purple-600 transition duration-500 ease-in-out bg-green-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110 ">
+                        Registrar nuevo servicio
+                    </a>
+                </div>
+            </div>
+        @endif
         </div>
     </div>
 </div>
