@@ -18,7 +18,7 @@ use Livewire\Component;
 class Regmail extends Component
 {
 
-    public $mail, $name, $ntelefono, $registed = false;
+    public $mail, $name, $ntelefono, $registed = false, $enviando = false;
     public $cis = [0 => null];
     
     protected $rules = [
@@ -49,7 +49,15 @@ class Regmail extends Component
     {
         // dd($this->cis);
 
+        $this->mail = trim($this->mail);
+
+        sleep(200000);
+
         $this->validate();
+
+        $this->enviando = true;
+
+        
 
         $data = [
             'mail' => $this->mail,
@@ -84,6 +92,7 @@ class Regmail extends Component
         $this->ntelefono = '';
         $this->mail = '';
         $this->cis = [0 => null];
+        $this->enviando = false;
 
         // session()->flash('message', 'Verificar Email en correo electronico...');
 
