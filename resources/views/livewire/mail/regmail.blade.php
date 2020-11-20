@@ -21,7 +21,7 @@
                             <div class="col-span-12 sm:col-span-6">
                                 <label for="first_name" 
                                     class="block text-sm font-medium leading-5 text-gray-700">
-                                    Numero de telefono
+                                    Número de telefono
                                 </label>
                                 <input wire:model="ntelefono"
                                     class="mt-1 form-input block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
@@ -30,7 +30,7 @@
                             <div class="col-span-12 sm:col-span-6">
                                 <label for="first_name" 
                                     class="block text-sm font-medium leading-5 text-gray-700">
-                                    Mail
+                                    Correo electrónico
                                 </label>
                                 <input wire:model="mail"
                                     class="mt-1 form-input block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
@@ -63,12 +63,31 @@
                                 </div>
                                 @endif
                             @endforeach
-                            <div class="col-span-8 sm:col-span-4">
-                                <button wire:click.prevent="agregarCis()" type="button"
-                                    class="py-2 px-3 border border-transparent text-sm leading-5 font-medium rounded-full text-white bg-yellow-400 shadow-sm hover:bg-yellow-500 focus:outline-none focus:shadow-outline-orange active:bg-yellow-600 transition duration-150 ease-in-out">
-                                    Agregar CIS
-                                </button>
-                            </div> 
+                            <div class="col-span-12 sm:col-span-6">
+                                <div class="flex justify-between">
+                                    <div>
+                                    <button wire:click.prevent="agregarCis()" type="button"
+                                        class="py-2 px-3 border border-transparent text-sm leading-5 font-medium rounded-full text-white bg-yellow-400 shadow-sm hover:bg-yellow-500 focus:outline-none focus:shadow-outline-orange active:bg-yellow-600 transition duration-150 ease-in-out">
+                                        Agregar CIS
+                                    </button>
+                                    </div>
+                                    <div>
+                                    {{-- <button wire:click.prevent="agregarCis()" type="button"
+                                        class="py-2 px-3 border border-transparent text-sm leading-5 font-medium rounded-full text-white bg-yellow-400 shadow-sm hover:bg-yellow-500 focus:outline-none focus:shadow-outline-orange active:bg-yellow-600 transition duration-150 ease-in-out">
+                                        <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
+                                            <!-- ... -->
+                                        </svg>
+                                        Donde encontrar el CIS
+                                    </button> --}}
+                                    {{-- <button type="button" class="bg-rose-600" disabled>
+                                        <svg class="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
+                                          <!-- ... -->
+                                        </svg>
+                                        Processing
+                                    </button> --}}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         @if (session()->has('message'))
