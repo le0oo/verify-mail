@@ -10,7 +10,6 @@ use App\Models\VerifyMail;
 use App\Models\CisMail;
 use App\Models\MailTable;
 
-
 use Illuminate\Http\Request;
 
 use Livewire\Component;
@@ -20,7 +19,7 @@ class Regmail extends Component
 
     public $mail, $name, $ntelefono, $registed = false, $enviando = false;
     public $cis = [0 => null];
-    
+
     protected $rules = [
         'name' => 'required',
         'ntelefono' => 'required',
@@ -39,7 +38,6 @@ class Regmail extends Component
         // 'cis.*.exists' => 'El CIS no existe',
     ];
 
-
     public function render()
     {
         return view('livewire.mail.regmail');
@@ -51,20 +49,18 @@ class Regmail extends Component
 
         $this->mail = trim($this->mail);
 
-        sleep(200000);
+        // sleep(2000);
 
         $this->validate();
 
         $this->enviando = true;
-
-        
 
         $data = [
             'mail' => $this->mail,
             'cis' => $this->cis,
             'verify_code' => Str::random(64),
         ];
-        
+
         $verifymail = VerifyMail::create([
             'mail' => $data['mail'],
             'verify_code' => $data['verify_code'],

@@ -13,6 +13,17 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
         },
+        extend: {
+            backgroundImage: theme => ({
+             'grupo-fondo': "url('/img/grupojuninfondoform-03.png')",
+            }),
+            backgroundColor: theme => ({
+                ...theme('colors'),
+                'prueba': '#347080',
+                'secondary': '#ffed4a',
+                'danger': '#e3342f',
+               })
+        }
     },
 
     variants: {
