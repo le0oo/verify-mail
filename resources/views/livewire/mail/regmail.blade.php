@@ -54,14 +54,6 @@
                                         class="mt-1 form-input block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
                                     @error('cis.'.$item) <span class="text-red-500">{{ $message }}</span>@enderror
                                 </div>
-                                {{-- <div class="col-span-6 sm:col-span-3">
-                                    <label for="last_name" 
-                                        class="block text-sm font-medium leading-5 text-gray-700">CIS #{{$item + 1}}
-                                    </label>
-                                    <input wire:model="cis.{{$item}}"
-                                        class="mt-1 form-input block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
-                                    @error('cis.'.$item) <span class="text-red-500">{{ $message }}</span>@enderror
-                                </div> --}}
                                 @if(count($this->cis) > 1)
                                 <div class="col-span-2 sm:col-span-1">
                                     <button wire:click.prevent="eliminarCis({{$item}})" type="button"

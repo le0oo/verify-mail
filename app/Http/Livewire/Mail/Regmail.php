@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use App\Models\CisTable;
-// use App\Models\TableSystemCis;
+use App\Models\TableSystemCis;
 use App\Models\VerifyMail;
 use App\Models\CisMail;
 use App\Models\MailTable;
@@ -19,23 +19,28 @@ class Regmail extends Component
 
     public $mail, $name, $ntelefono, $registed = false, $enviando = false;
     public $cis = [0 => null];
+    protected $rules, $messages;
+    public $cisdirec = [0 => null];
 
-    protected $rules = [
-        'name' => 'required',
-        'ntelefono' => 'required',
-        'mail' => 'required|email',
-        'cis.*' => 'required|numeric',
-        // 'cis.*' => 'required|numeric|exists:App\Models\TableSystemCis,cis',
-    ];
+    // protected $rules = [
+    //     'name' => 'required',
+    //     'ntelefono' => 'required',
+    //     'mail' => 'required|email',
+    //     'cis.*' => 'required|numeric|exists:App\Models\TableSystemCis,cis',
+    // ];
 
-    protected $messages = [
-        'name.required' => 'Debe completar el nombre',
-        'ntelefono.required' => 'Debe completar el telefono',
-        'mail.required' => 'Debe completar el Email',
-        'mail.email' => 'El email no es correcto',
-        'cis.*.required' => 'Debe completar el campo CIS',
-        'cis.*.numeric' => 'CIS mal ingresado',
-        // 'cis.*.exists' => 'El CIS no existe',
+    // protected $messages = [
+    //     'name.required' => 'Debe completar el nombre',
+    //     'ntelefono.required' => 'Debe completar el telefono',
+    //     'mail.required' => 'Debe completar el Email',
+    //     'mail.email' => 'El email no es correcto',
+    //     'cis.*.required' => 'Completar CIS',
+    //     'cis.*.numeric' => 'CIS mal ingresado',
+    //     'cis.*.exists' => 'CIS no existe',
+    // ];
+
+    protected $messages2 = [
+        'cis.*.exists' => 'Prueba',
     ];
 
     public function render()
@@ -45,11 +50,26 @@ class Regmail extends Component
 
     public function store()
     {
-        // dd($this->cis);
 
         $this->mail = trim($this->mail);
 
-        // sleep(2000);
+        $this->rules = [
+            'name' => 'required',
+            'ntelefono' => 'required',
+            'mail' => 'required|email',
+            'cis.*' => 'required|numeric|exists:App\Models\TableSystemCis,cis',
+        ];
+
+
+        $this->messages = [
+            'name.required' => 'Debe completar el nombre',
+            'ntelefono.required' => 'Debe completar el telefono',
+            'mail.required' => 'Debe completar el Email',
+            'mail.email' => 'El email no es correcto',
+            'cis.*.required' => 'Completar CIS',
+            'cis.*.numeric' => 'CIS mal ingresado',
+            'cis.*.exists' => 'CIS no existe',
+        ];
 
         $this->validate();
 
