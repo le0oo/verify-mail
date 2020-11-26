@@ -42,12 +42,12 @@ class Regmail extends Component
 
         $this->messages = [
             'name.required' => 'Debe completar el nombre',
-            'ntelefono.required' => 'Debe completar el telefono',
-            'mail.required' => 'Debe completar el Email',
+            'ntelefono.required' => 'Debe completar el teléfono',
+            'mail.required' => 'Debe completar el correo electronico',
             'mail.email' => 'El email no es correcto',
             'cis.*.required' => 'Completar CIS',
             'cis.*.numeric' => 'CIS mal ingresado',
-            'cis.*.exists' => 'CIS no existe',
+            'cis.*.exists' => 'CIS inválido',
         ];
 
         $this->validate();
