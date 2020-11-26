@@ -39,9 +39,16 @@
                         </div>
                     </div>
                 </div>
-                <p class="text-gray-700 text-opacity-50 text-center font-serif italic mb-2 mt-4">
-                    Servicios
-                </p>
+                <div class="flex justify-between mt-6">
+                    <div>
+                        <p class="text-gray-700 text-opacity-50 text-center font-serif italic">
+                            Servicios
+                        </p>
+                    </div>
+                    <div>
+                        <x-modal-tailwind />
+                    </div>
+                </div>
                 <div class="shadow overflow-hidden sm:rounded-md">
                     <div class="px-4 py-5 bg-white sm:p-3">
                         <div class="grid grid-cols-6 gap-6">
@@ -56,10 +63,6 @@
                                 </div>
                                 @if(count($this->cis) > 1)
                                 <div class="col-span-2 sm:col-span-1">
-                                    {{-- <button wire:click.prevent="eliminarCis({{$item}})" type="button"
-                                        class="mt-6 py-2 px-3 border border-transparent text-lg leading-5 font-medium rounded-full text-white bg-yellow-400 shadow-sm hover:bg-yellow-500 focus:outline-none focus:shadow-outline-orange active:bg-yellow-600 transition duration-150 ease-in-out">
-                                        -
-                                    </button> --}}
                                     <button wire:click.prevent="eliminarCis({{$item}})" type="button"
                                         class="mt-5 bg-grey-light text-grey-darkest font-bold py-1 px-1 rounded inline-flex items-center hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50">
                                         <svg class="fill-current w-10 h-10 text-red-700" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
@@ -75,9 +78,6 @@
                                             Agregar CIS
                                             </button>
                                         </button>
-                                    </div>
-                                    <div>
-                                        <x-modal-tailwind />
                                     </div>
                                 </div>
                             </div>
