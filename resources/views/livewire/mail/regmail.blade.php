@@ -1,5 +1,5 @@
 <div>
-    <div class="mt-10 sm:mt-2">
+    <div class="mt-10 sm:mt-2" wire:keydown="resetPage()">
         <div class="mt-5 mr-5 mb-1 ml-5 md:mt-5 md:col-span-2">
         @if(!$registed)
             <div>

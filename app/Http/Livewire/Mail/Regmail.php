@@ -22,27 +22,6 @@ class Regmail extends Component
     protected $rules, $messages;
     public $cisdirec = [0 => null];
 
-    // protected $rules = [
-    //     'name' => 'required',
-    //     'ntelefono' => 'required',
-    //     'mail' => 'required|email',
-    //     'cis.*' => 'required|numeric|exists:App\Models\TableSystemCis,cis',
-    // ];
-
-    // protected $messages = [
-    //     'name.required' => 'Debe completar el nombre',
-    //     'ntelefono.required' => 'Debe completar el telefono',
-    //     'mail.required' => 'Debe completar el Email',
-    //     'mail.email' => 'El email no es correcto',
-    //     'cis.*.required' => 'Completar CIS',
-    //     'cis.*.numeric' => 'CIS mal ingresado',
-    //     'cis.*.exists' => 'CIS no existe',
-    // ];
-
-    protected $messages2 = [
-        'cis.*.exists' => 'Prueba',
-    ];
-
     public function render()
     {
         return view('livewire.mail.regmail');
@@ -130,5 +109,9 @@ class Regmail extends Component
             array_push($array, $value);
         }
         $this->cis = $array;
+    }
+
+    public function resetPage(){
+        $this->resetErrorBag();
     }
 }
