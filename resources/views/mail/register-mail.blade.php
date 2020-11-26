@@ -1,7 +1,7 @@
 <x-guest-layout>
 <div class="bg-prueba">
     <div class="min-h-screen flex flex-col sm:justify-center items-center sm:pt-0 bg-center bg-no-repeat bg-grupo-fondo">
-        <div>
+        <div class="mt-6">
             <x-authentication-card-logo />
         </div>
     
