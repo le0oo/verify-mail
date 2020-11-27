@@ -58,12 +58,4 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     /* Mail Table */
     Route::get('/mail/mailtable', [TableMailController::class, 'index'])->name('mail.table');
 
-    // Route::get('/mail/export/excel/{vardatos}', function(){
-    //     return Excel::download($vardatos, 'mails.xlsx');
-    // })->name('mail.export.excel');
-
-    // Route::get('/mail/export/csv', function(){
-    //     return Excel::download(new MailsExport, 'mails.csv');
-    // })->name('mail.export.csv');
-
 });

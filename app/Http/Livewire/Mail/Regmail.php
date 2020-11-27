@@ -89,8 +89,6 @@ class Regmail extends Component
         $this->cis = [0 => null];
         $this->enviando = false;
 
-        // session()->flash('message', 'Verificar Email en correo electronico...');
-
         return $this->registed = true;
 
     }

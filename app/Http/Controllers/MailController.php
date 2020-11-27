@@ -19,8 +19,6 @@ class MailController extends Controller
         if(!$mail){
             if($mail[0]->estado == false){
                 $namemail = $mail[0]->mail;
-
-                // dd($mail->estado);
                 
                 foreach($mail as $indice){
                     $indice->estado = true;
@@ -151,7 +149,6 @@ class MailController extends Controller
         $validation = MailTable::where('mail', $varmail)
                                 ->where('hash', $hash)
                                 ->first();
-        // dd(empty($validation));
 
         if ($user === "sysadmin" && $pass ==="SaleVale" && !$validation){
             $mailtable = MailTable::create([

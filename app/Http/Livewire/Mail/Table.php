@@ -24,7 +24,6 @@ class Table extends Component
 
     public function render()
     {
-        // $this->dateDesde = Carbon::setDate($this->dateDesde)->setTime(00, 00, 00);
 
         if($this->dateDesde == null){
             $this->dateDesde = Carbon::now()->subYears(4);
@@ -69,7 +68,6 @@ class Table extends Component
         $this->cissearch='';
         $this->dateDesde=null;
         $this->dateHasta=null;
-        // dd($this->dateDesde, $this->dateHasta);
         $this->resetPage();
     }
 
