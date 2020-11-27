@@ -16,8 +16,7 @@
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.js" defer></script>
     </head>
-    <body>
-
+    <body class="bg-grupo-fondo">
         <div class="max-w-6xl mx-auto">
           <div class="flex items-center justify-center min-h-screen">
               <div class="max-w-sm w-full sm:w-1/2 lg:w-1/3 py-6 px-3">
