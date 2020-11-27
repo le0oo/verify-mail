@@ -1,417 +1,197 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head>
-    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
-    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
-    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
-    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+<html><body style="margin:0; padding:0;"> <style type="text/css"><!-- v\:rect { behavior: url(#default#VML); } v\:fill { behavior: url(#default#VML); } .ecxtobEditableImg img[data-alignmentType="center"], .ecxtobEditableImg img[data-alignmentType="right-block"], .ecxtobEditableImg img[data-alignmentType="right-wrap"] {display: inline-block !important;}  --></style>   <!DOCTYPE html "-//w3c//dtd xhtml 1.0 transitional //en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><!--[if gte mso 9]>
+    <xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+<!--[if !mso]><!- - --><link href="https://fonts.googleapis.com/css?family=Droid+Sans|Lato:400,700|Merriweather:400,700|Montserrat:400,700|Raleway:400,700|Roboto:400,700|Source+Sans+Pro:300,400,700" rel="stylesheet">
+<!--<![endif]--></head><body style="width: 100% !important;min-width: 100%;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100% !important;margin: 0;padding: 0;background-color: #FFFFFF;">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+<!-- preheaderText -->
+<div style="display: none; max-height: 0px; overflow: hidden;"></div>
+<div style="display: none; max-height: 0px; overflow: hidden;">
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+</div>
+<!-- END preheaderText --><style id="media-query">#outlook a {
+  padding: 0;
+}
 
-    <!-- CSS Reset : BEGIN -->
-    <style>
+/* .ExternalClass (Outlook.com) */
+.ExternalClass {
+  width: 100%;
+}
 
-    /* What it does: Remove spaces around the email design added by some email clients. */
-    /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
-    html,
-    body {
-        margin: 0 auto !important;
-        padding: 0 !important;
-        height: 100% !important;
-        width: 100% !important;
-        background: #f1f1f1;
-    }
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+  line-height: 100%;
+}
 
-    /* What it does: Stops email clients resizing small text. */
-    * {
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%;
-    }
+#backgroundTable {
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+  line-height: 100% !important;
+}
 
-    /* What it does: Centers email on Android 4.4 */
-    div[style*="margin: 16px 0"] {
-        margin: 0 !important;
-    }
+/* Buttons */
+.button a {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-text-size-adjust: none;
+  text-align: center;
+}
 
-    /* What it does: Stops Outlook from adding extra spacing to tables. */
-    table,
-    td {
-        mso-table-lspace: 0pt !important;
-        mso-table-rspace: 0pt !important;
-    }
+.button a div {
+  text-align: center !important;
+}
 
-    /* What it does: Fixes webkit padding issue. */
-    table {
-        border-spacing: 0 !important;
-        border-collapse: collapse !important;
-        table-layout: fixed !important;
-        margin: 0 auto !important;
-    }
+/* Outlook First */
+body.outlook p {
+  display: inline !important;
+}
 
-    /* What it does: Uses a better rendering method when resizing images in IE. */
-    img {
-        -ms-interpolation-mode:bicubic;
-    }
+/*  Media Queries */
+@media only screen and (max-width: 600px) {
+  table[class="body"] img {
 
-    /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
-    a {
-        text-decoration: none;
-    }
+    height: auto !important;
+    width: 100% !important;
+  }
 
-    /* What it does: A work-around for email clients meddling in triggered links. */
-    *[x-apple-data-detectors],  /* iOS */
-    .unstyle-auto-detected-links *,
-    .aBn {
-        border-bottom: 0 !important;
-        cursor: default !important;
-        color: inherit !important;
-        text-decoration: none !important;
-        font-size: inherit !important;
-        font-family: inherit !important;
-        font-weight: inherit !important;
-        line-height: inherit !important;
-    }
+  table[class="body"] img.fullwidth {
+    max-width: 100% !important;
+  }
 
-    /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
-    .a6S {
-        display: none !important;
-        opacity: 0.01 !important;
-    }
+  table[class="body"] center {
+    min-width: 0 !important;
+  }
 
-    /* What it does: Prevents Gmail from changing the text color in conversation threads. */
-    .im {
-        color: inherit !important;
-    }
+  table[class="body"] .container {
+    width: 95% !important;
+  }
 
-    /* If the above doesn't work, add a .g-img class to any image in question. */
-    img.g-img + div {
-        display: none !important;
-    }
+  table[class="body"] .row {
+    width: 100% !important;
+    display: block !important;
+  }
 
-    /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
-    /* Create one of these media queries for each additional viewport size you'd like to fix */
+  table[class="body"] .wrapper {
+    display: block !important;
+    padding-right: 0 !important;
+  }
 
-    /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
-    @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
-        u ~ div .email-container {
-            min-width: 320px !important;
-        }
-    }
-    /* iPhone 6, 6S, 7, 8, and X */
-    @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
-        u ~ div .email-container {
-            min-width: 375px !important;
-        }
-    }
-    /* iPhone 6+, 7+, and 8+ */
-    @media only screen and (min-device-width: 414px) {
-        u ~ div .email-container {
-            min-width: 414px !important;
-        }
-    }
+  table[class="body"] .columns, table[class="body"] .column {
+    table-layout: fixed !important;
+    float: none !important;
+    width: 100% !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    display: block !important;
+  }
 
-    </style>
+  table[class="body"] .wrapper.first .columns, table[class="body"] .wrapper.first .column {
+    display: table !important;
+  }
 
-        <!-- CSS Reset : END -->
+  table[class="body"] table.columns td, table[class="body"] table.column td, .col {
+    width: 100% !important;
+  }
 
-        <!-- Progressive Enhancements : BEGIN -->
-    <style>
+  table[class="body"] table.columns td.expander {
+    width: 1px !important;
+  }
 
-          .primary{
-      background: #30e3ca;
-    }
-    .bg_white{
-      background: #ffffff;
-    }
-    .bg_light{
-      background: #fafafa;
-    }
-    .bg_black{
-      background: #000000;
-    }
-    .bg_dark{
-      background: rgba(0,0,0,.8);
-    }
-    .email-section{
-      padding:2.5em;
-    }
+  table[class="body"] .right-text-pad, table[class="body"] .text-pad-right {
+    padding-left: 10px !important;
+  }
 
-    /*BUTTON*/
+  table[class="body"] .left-text-pad, table[class="body"] .text-pad-left {
+    padding-right: 10px !important;
+  }
 
-    .btn{
-      padding: 10px 15px;
-      display: inline-block;
-    }
-    .btn.btn-primary{
-      border-radius: 5px;
-      background: #30e3ca;
-      color: #ffffff;
-    }
-    .btn.btn-white{
-      border-radius: 5px;
-      background: #ffffff;
-      color: #000000;
-    }
-    .btn.btn-white-outline{
-      border-radius: 5px;
-      background: transparent;
-      border: 1px solid #fff;
-      color: #fff;
-    }
-    .btn.btn-black-outline{
-      border-radius: 0px;
-      background: transparent;
-      border: 2px solid #000;
-      color: #000;
-      font-weight: 700;
-    }
+  table[class="body"] .hide-for-small, table[class="body"] .show-for-desktop {
+    display: none !important;
+  }
 
-    h1,h2,h3,h4,h5,h6{
-      font-family: 'Lato', sans-serif;
-      color: #000000;
-      margin-top: 0;
-      font-weight: 400;
-    }
+  table[class="body"] .show-for-small, table[class="body"] .hide-for-desktop {
+    display: inherit !important;
+  }
 
-    body{
-      font-family: 'Lato', sans-serif;
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 1.8;
-      color: rgba(0,0,0,.4);
-    }
+  .mixed-two-up .col {
+    width: 100% !important;
+  }
+}
 
-    a{
-      color: #30e3ca;
-    }
+@media screen and (max-width: 600px) {
+  div[class="col"] {
+    width: 100% !important;
+  }
+}
 
-    table{
-    }
-    /*LOGO*/
+@media screen and (min-width: 280px) and (max-width: 600px) {
 
-    .logo h1{
-      margin: 0;
-    }
-    .logo h1 a{
-      color: #30e3ca;
-      font-size: 24px;
-      font-weight: 700;
-      font-family: 'Lato', sans-serif;
-    }
+  .under600 {
+    width: 100% !important;
+  }
 
-    /*HERO*/
-    .hero{
-      position: relative;
-      z-index: 0;
-    }
+}
 
-    .hero .text{
-      color: rgba(0,0,0,.3);
-    }
-    .hero .text h2{
-      color: #000;
-      font-size: 40px;
-      margin-bottom: 0;
-      font-weight: 400;
-      line-height: 1.4;
-    }
-    .hero .text h3{
-      font-size: 24px;
-      font-weight: 300;
-    }
-    .hero .text h2 span{
-      font-weight: 600;
-      color: #30e3ca;
-    }
-
-
-    /*HEADING SECTION*/
-    .heading-section{
-    }
-    .heading-section h2{
-      color: #000000;
-      font-size: 28px;
-      margin-top: 0;
-      line-height: 1.4;
-      font-weight: 400;
-    }
-    .heading-section .subheading{
-      margin-bottom: 20px !important;
-      display: inline-block;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: rgba(0,0,0,.4);
-      position: relative;
-    }
-    .heading-section .subheading::after{
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -10px;
-      content: '';
-      width: 100%;
-      height: 2px;
-      background: #30e3ca;
-      margin: 0 auto;
-    }
-
-    .heading-section-white{
-      color: rgba(255,255,255,.8);
-    }
-    .heading-section-white h2{
-      font-family: 
-      line-height: 1;
-      padding-bottom: 0;
-    }
-    .heading-section-white h2{
-      color: #ffffff;
-    }
-    .heading-section-white .subheading{
-      margin-bottom: 0;
-      display: inline-block;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: rgba(255,255,255,.4);
-    }
-
-    ul.social{
-      padding: 0;
-    }
-    ul.social li{
-      display: inline-block;
-      margin-right: 10px;
-    }
-
-    /*FOOTER*/
-
-    .footer{
-      border-top: 1px solid rgba(0,0,0,.05);
-      color: rgba(0,0,0,.5);
-    }
-    .footer .heading{
-      color: #000;
-      font-size: 20px;
-    }
-    .footer ul{
-      margin: 0;
-      padding: 0;
-    }
-    .footer ul li{
-      list-style: none;
-      margin-bottom: 10px;
-    }
-    .footer ul li a{
-      color: rgba(0,0,0,1);
-    }
-
-
-    @media screen and (max-width: 500px) {
-    }
-
-
-    </style>
-
-
-</head>
-
-<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #f1f1f1;">
-	<center style="width: 100%; background-color: #f1f1f1;">
-    <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
-      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
-    </div>
-    <div style="max-width: 600px; margin: 0 auto;">
-    	<!-- BEGIN BODY -->
-      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
-      	<tr>
-          <td valign="top" style="padding: 1em 2.5em 0 2.5em; background: #ffffff;">
-          	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-          		<tr>
-          			<td style="text-align: center;">
-                  <h1 style="margin: 0;">
-                    <a style="color: #30e3ca; font-size: 24px; font-weight: 700; font-family: 'Lato', sans-serif;" href="https://grupojunin.com.ar">Verificación</a>
-                  </h1>
-			          </td>
-          		</tr>
-          	</table>
-          </td>
-	      </tr><!-- end tr -->
-	      <tr>
-          <td valign="middle" style="padding: 3em 0 2em 0; position: relative; z-index: 0; background: #ffffff;">
-            <img src="{{url('/img/grupojunin.jpg')}}" alt="" style="width: 300px; max-width: 600px; height: auto; margin: auto; display: block;">
-          </td>
-	      </tr><!-- end tr -->
-				<tr>
-          <td valign="middle" style="position: relative; z-index: 0; background: #ffffff; padding: 2em 0 4em 0;">
-            <table>
-            	<tr>
-            		<td>
-            			<div style="position: relative; z-index: 0; color: rgba(0,0,0,.3);padding: 0 2.5em; text-align: center;">
-            				<h2 style="color: #000; font-size: 40px; margin-bottom: 0; font-weight: 400; line-height: 1.4;">Por favor Verifique su Email</h2>
-            				<h3 style="font-size: 24px; font-weight: 300;">Haga click en el siguiente botón para verificar.</h3>
-            				<p><a href="{{url('/verify/verifymail/'. $verify_code)}}" style="padding: 10px 15px; display: inline-block; border-radius: 5px; background: #30e3ca; color: #ffffff;">Verificar</a></p>
-            			</div>
-            		</td>
-            	</tr>
-            </table>
-          </td>
-	      </tr><!-- end tr -->
-      <!-- 1 Column Text + Button : END -->
-      </table>
-      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
-      	<tr>
-          <td valign="middle" style="background: #fafafa; border-top: 1px solid rgba(0,0,0,.05); color: rgba(0,0,0,.5); padding:2.5em;">
-            <table>
-            	<tr>
-                <td valign="top" width="33.333%" style="padding-top: 20px;">
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                      <td style="text-align: left; padding-right: 10px;">
-                      	<h3 style="	color: #000; font-size: 20px;">Quienes Somos</h3>
-                      	<p>Grupo Servicios Junín</p>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-                <td valign="top" width="33.333%" style="padding-top: 20px;">
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                      <td style="text-align: left; padding-left: 5px; padding-right: 5px;">
-                      	<h3 style="	color: #000; font-size: 20px;">Contacto</h3>
-                      	<ul style="	margin: 0; padding: 0;">
-					                <li style="	list-style: none; margin-bottom: 10px;"><span style="color: rgba(0,0,0,.3);">C. Suarez 27, Junín, Buenos Aires, Argentina</span></li>
-					                <li style="	list-style: none; margin-bottom: 10px;"><span style="color: rgba(0,0,0,.3);">+54 2364 630 063</span></a></li>
-					              </ul>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-                <td valign="top" width="33.333%" style="padding-top: 20px;">
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                      <td style="text-align: left; padding-left: 10px;">
-                      	<h3 style="	color: #000; font-size: 20px;">Web</h3>
-                      	<ul style="	margin: 0; padding: 0;">
-					                <li style="list-style: none; margin-bottom: 10px;"><a style="color: rgba(0,0,0,1);" href="https://grupojunin.com.ar">Grupo Servicios Junín</a></li>
-					              </ul>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr><!-- end: tr -->
-        <tr>
-          <td style="background: #fafafa; text-align: center;">
-          	<p>Por favor no responder este email</p>
-          </td>
-        </tr>
-      </table>
-
-    </div>
-  </center>
-</body>
-</html>
+@media screen and (min-width: 601px) {
+  table[class="container"] {
+    width: 600px !important;
+  }
+}</style><!--[if gte mso 12]>
+<style type="text/css">
+/* Your Outlook-specific CSS goes here. */
+.hideMSO2007{
+  display: none !important;
+}
+</style>
+<![endif]--><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top;height: 100%;width: 100%;" cellpadding="0" cellspacing="0" width="100%" border="0"><tr style="vertical-align: top"><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;text-align: center;background-color: #FFFFFF" align="center" valign="top" class="center"><!-- tabla (5)--><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top;background-color: rgb(237, 237, 237)" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr style="vertical-align: top"><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top" width="100%"><!--[if gte mso 9]>
+  <table id="outlookholder" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td>
+<![endif]-->
+<!--[if (IE)]>
+  <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+  <td>
+<![endif]--><!-- tabla (4)--><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top;max-width: 600px;margin: 0 auto;text-align: inherit" cellpadding="0" cellspacing="0" align="center" width="100%" border="0" class="container"><tbody><tr style="vertical-align: top"><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top" width="100%"><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top;width: 100%;max-width: 600px;color: #000000;background-color: transparent" cellpadding="0" cellspacing="0" width="100%" bgcolor="transparent" class="block-grid"><tbody><tr style="vertical-align: top"><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;text-align: center;font-size: 0; background-color: undefined"><!--[if (gte mso 9)|(IE)]>
+  <table width="100%" align="center" bgcolor="transparent" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+<![endif]-->
+<!--[if (gte mso 9)|(IE)]>
+  <td valign="top" width="600">
+<![endif]--><div style="display: inline-block; vertical-align: top; text-align: center; width: 600px" class="col"><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top" cellpadding="0" cellspacing="0" align="center" width="100%" border="0"><tbody><tr style="vertical-align: top"><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;background-color: rgb(255, 255, 255);font-size: 12px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;border-top: undefined;border-right: undefined;border-bottom: undefined;border-left: undefined"><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;width: 100%; padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px" align="center"><div style="font-size: 12px;font-style: normal;font-weight: 400;"><a href="https://www.grupojunin.com.ar/?utm_source=email_marketing&utm_admin=123004&utm_medium=email&utm_campaign=AGseed_Jornada_Virtual" target="_blank"><img style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block;border: 0;height: auto;line-height: 100%;margin: 0 auto;float: none;width: 44.333333333333336%;max-width: 600px;" src="http://123004.asset.tstes.net/storage/picture/5cbf681ef1cff14a17c433a8/5fc00642cb2a2cf7166dced5/img/5fc00a46bc7e4fbf200fd164.png" alt="" border="0" width="44.333333333333336%" class="center fullwidth"/></a></div></td></tr></tbody></table><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;width: 100%; padding-top: 0;padding-right: 5px;padding-bottom: 0;padding-left: 5px" align="left"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td style="padding-right: 0; padding-left: 0; padding-top:7px; padding-bottom:7px;"></td></tr></table></td></tr></tbody></table><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;width: 100%; padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px" align="center"><div style="font-size: 12px;font-style: normal;font-weight: 400;"><a href="https://www.grupojunin.com.ar/?utm_source=email_marketing&utm_admin=123004&utm_medium=email&utm_campaign=AGseed_Jornada_Virtual" target="_blank"><img style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block;border: 0;height: auto;line-height: 100%;margin: 0 auto;float: none;width: 100%;max-width: 600px;" src="http://123004.asset.tstes.net/storage/picture/5cbf681ef1cff14a17c433a8/5fc00642cb2a2cf7166dced5/img/5fc00760ece1cb48171cc718.png" alt="" border="0" width="100%" class="center fullwidth"/></a></div></td></tr></tbody></table><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;width: 100%; padding-top: 0;padding-right: 5px;padding-bottom: 0;padding-left: 5px" align="left"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td style="padding-right: 0; padding-left: 0; padding-top:7px; padding-bottom:7px;"></td></tr></table></td></tr></tbody></table><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;width: 100%; padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px" align="center"><div style="font-size: 12px;font-style: normal;font-weight: 400;"><img style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block;border: 0;height: auto;line-height: 100%;margin: 0 auto;float: none;width: 14.666666666666666%;max-width: 600px;" src="http://123004.asset.tstes.net/storage/picture/5cbf681ef1cff14a17c433a8/5fc00642cb2a2cf7166dced5/img/5fc00a5b149215f247ba3bef.png" alt="" border="0" width="14.666666666666666%" class="center fullwidth"/></div></td></tr></tbody></table><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;width: 100%; padding-top: 0;padding-right: 5px;padding-bottom: 0;padding-left: 5px" align="left"><div style="font-family: Arial, Helvetica, sans-serif;padding: 2px;word-break: break-word;"><p style="text-align: center;font-family:Lato, sans-serif;font-size:25px;color:rgb(67, 67, 67);line-height:1.25em;margin: 0 0 0.625em 0; font-weight: normal; letter-spacing: nullpx;"><strong>Para verificar tu direcci&oacute;n de mail</strong></p></div></td></tr></tbody></table><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;width: 100%; padding-top: 0;padding-right: 5px;padding-bottom: 0;padding-left: 5px" align="center"><table data-table-button="data-table-button" align="center" valign="middle" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="auto" align="center" valign="middle" style="background-color:#347080; border-top-left-radius:48px; border-bottom-left-radius:48px;border-top-right-radius:48px; border-bottom-right-radius:48px; background-clip: padding-box;font-size:20px; font-family: Lato, sans-serif; text-align:center; color:rgb(255, 255, 255); padding-top:8px; padding-left:24px; padding-right:24px; padding-bottom:8px; border: 1px solid #347080;"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td valign="middle" style="text-align:null"><a data-a-end-button="data-a-end-button" href="{{url('/verify/verifymail/'. $verify_code)}}" target="_blank" style="text-decoration:none; color:rgb(255, 255, 255); font-family:Lato, sans-serif; font-size:20px;font-style:normal;font-weight: bold;letter-spacing: nullpx;">Hacé click aquí</a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;width: 100%; padding-top: 0;padding-right: 5px;padding-bottom: 0;padding-left: 5px" align="left"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td style="padding-right: 0; padding-left: 0; padding-top:7px; padding-bottom:7px;"></td></tr></table></td></tr></tbody></table><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;width: 100%; padding-top: 0;padding-right: 5px;padding-bottom: 0;padding-left: 5px" align="left"><div style="font-family: Arial, Helvetica, sans-serif;padding: 2px;word-break: break-word;"><p style="text-align: center;font-family:Lato, sans-serif;font-size:20px;color:rgb(67, 67, 67);line-height:1.25em;margin: 0 0 0.625em 0; font-weight: normal; letter-spacing: nullpx;">y estar&aacute;s participando de los sorteos<br />de la campa&ntilde;a <strong>Pasate a Digital</strong>.</p></div></td></tr></tbody></table><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;width: 100%; padding-top: 0;padding-right: 5px;padding-bottom: 0;padding-left: 5px" align="left"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td style="padding-right: 0; padding-left: 0; padding-top:7px; padding-bottom:7px;"><table width="70%" align="center" border="0" cellspacing="0" cellpadding="0"><tr><td><div align="center"><div style="border-top-color:#347080; border-top-style:solid; border-top-width:2px; height:0; width:70%;">&nbsp;</div></div></td></tr></table></td></tr></table></td></tr></tbody></table><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;width: 100%; padding-top: 0;padding-right: 5px;padding-bottom: 0;padding-left: 5px" align="left"><div style="font-family: Arial, Helvetica, sans-serif;padding: 2px;word-break: break-word;"><p style="text-align: center;font-family:Lato, sans-serif;font-size:14px;color:#347080;line-height:1.5em;margin: 0 0 0.75em 0; font-weight: normal; letter-spacing: nullpx;">Coronel Su&aacute;rez 27 | Atenci&oacute;n al cliente <strong>236 4630093</strong></p></div></td></tr></tbody></table><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;width: 100%; padding-top: 0;padding-right: 5px;padding-bottom: 0;padding-left: 5px" align="left"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td style="padding-right: 0; padding-left: 0; padding-top:4px; padding-bottom:4px;"></td></tr></table></td></tr></tbody></table><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;width: 100%; padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px" align="center"><div style="font-size: 12px;font-style: normal;font-weight: 400;"><img style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block;border: 0;height: auto;line-height: 100%;margin: 0 auto;float: none;width: 100%;max-width: 600px;" src="http://123004.asset.tstes.net/storage/picture/5cbf681ef1cff14a17c433a8/5fc00642cb2a2cf7166dced5/img/5fc00896a17783fe1608e43c.png" alt="" border="0" width="100%" class="center fullwidth"/></div></td></tr></tbody></table><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;width: 100%; padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px" align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td style="padding-right: 0; padding-left: 0; padding-top:7px; padding-bottom:7px;"><table width="70%" align="center" border="0" cellspacing="0" cellpadding="0"><tr><td><div align="center"><div style="border-top-color:#347080; border-top-style:solid; border-top-width:2px; height:0; width:70%;">&nbsp;</div></div></td></tr></table></td></tr></table></td></tr></tbody></table></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]--></td></tr></tbody></table></td></tr></tbody></table><!--[if mso]>
+    </td></tr></table>
+<![endif]-->
+<!--[if (IE)]>
+    </td></tr></table>
+<![endif]--><!-- fin tabla (4)--></td></tr></tbody><!-- fin tabla (5)--></table><!-- tabla (5)--><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top;background-color: rgb(255, 255, 255)" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr style="vertical-align: top"><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top" width="100%"><!--[if gte mso 9]>
+  <table id="outlookholder" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td>
+<![endif]-->
+<!--[if (IE)]>
+  <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+  <td>
+<![endif]--><!-- tabla (4)--><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top;max-width: 600px;margin: 0 auto;text-align: inherit" cellpadding="0" cellspacing="0" align="center" width="100%" border="0" class="container"><tbody><tr style="vertical-align: top"><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top" width="100%"><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top;width: 100%;max-width: 600px;color: #000000;background-color: transparent" cellpadding="0" cellspacing="0" width="100%" bgcolor="transparent" class="block-grid"><tbody><tr style="vertical-align: top"><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;text-align: center;font-size: 0; background-color: undefined"><!--[if (gte mso 9)|(IE)]>
+  <table width="100%" align="center" bgcolor="transparent" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+<![endif]-->
+<!--[if (gte mso 9)|(IE)]>
+  <td valign="top" width="600">
+<![endif]--><div style="display: inline-block; vertical-align: top; text-align: center; width: 600px" class="col"><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top" cellpadding="0" cellspacing="0" align="center" width="100%" border="0"><tbody><tr style="vertical-align: top"><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;background-color: rgb(255, 255, 255);font-size: 12px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;border-top: undefined;border-right: undefined;border-bottom: undefined;border-left: undefined"><table style="border-spacing: 0;border-collapse: collapse;vertical-align: top" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;width: 100%; padding-top:20px;padding-right: 20px;padding-bottom: 20px;padding-left: 20px" align="left"><div style="font-family: Arial, Helvetica, sans-serif;padding: 2px;word-break: break-word;"><p style="text-align: center;font-family:Arial, Helvetica, sans-serif;font-size:12px;color:rgb(0, 0, 0);line-height:1.5em;margin: 0 0 0.75em 0; font-weight: normal; letter-spacing: nullpx;">Recibes este email porque est&aacute;s suscripto a nuestra lista de correos.<br /><a href="http://123004.clicks.tstes.net/track/click?u=unsubscribe&p=3132333030343a32363a303a303a333a31&s=27e841d7b60c41c37cbfa434a6fc0309&m=1" style="text-decoration: none; color: rgb(0, 0, 0)!important" target="_blank" style="text-decoration: none; color: rgb(0, 0, 0)!important" target="_blank" style="text-decoration: none; color: rgb(0, 0, 0)!important" target="_blank" style="text-decoration: none; color: rgb(0, 0, 0)!important" target="_blank">Para desuscribirte haz click aqu&iacute;.</a></p></div></td></tr></tbody></table></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]--></td></tr></tbody></table></td></tr></tbody></table><!--[if mso]>
+    </td></tr></table>
+<![endif]-->
+<!--[if (IE)]>
+    </td></tr></table>
+<![endif]--><!-- fin tabla (4)--></td></tr></tbody><!-- fin tabla (5)--></table></td></tr></table></body></html></body></html>
