@@ -146,15 +146,20 @@ class MailController extends Controller
 
     public function registerMailsincis($user,$pass,$varmail,$hash){
 
-        $validation = MailTable::where('mail', $varmail)
-                                ->where('hash', $hash)
+        $validation = MailTable::where('hash', $hash)
                                 ->first();
 
-        if ($user === "sysadmin" && $pass ==="SaleVale" && !$validation){
-            $mailtable = MailTable::create([
-                'mail' => $varmail,
-                'hash' => $hash,
-            ]);
+        if ($user === "sysadmin" && $pass ==="SaleVale"){
+            if(!$validation){
+                MailTable::create([
+                    'hash' => $hash,
+                    'mail' => $varmail,
+                ]);
+            }elseif($validation->mail !== $varmail){
+                $validation->mail = $varmail;
+                $validation->estado = false;
+                $validation->save();
+            }
         }
     }
 }
